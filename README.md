@@ -1,1 +1,1 @@
-React tracking dashboard. Buil using redux, redux-saga, container-component architecture and hooks.
+React tracking dashboard. Built using redux, redux-saga, container-component architecture and hooks.
