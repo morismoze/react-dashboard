@@ -1,0 +1,13 @@
+.sidenav {
+  padding: 25px 0 25px 25px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--white);
+  width: 245px;
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+}

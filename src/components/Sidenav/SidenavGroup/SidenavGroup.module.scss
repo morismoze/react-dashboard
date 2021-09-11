@@ -1,0 +1,36 @@
+.tabsGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 50px;
+
+  &__tabsList {
+    width: 100%;
+  }
+
+  &__groupTitle {
+    color: var(--light-gray);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  &__tabListElement {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__active:after {
+    content: '';
+    width: 7px;
+    height: 40px;
+    background-color: var(--blue);
+    display: inline-block;
+    position: relative;
+    right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+}
