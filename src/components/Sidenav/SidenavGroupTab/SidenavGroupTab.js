@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import * as AntDesignIcons from 'react-icons/ai';
 
@@ -13,15 +14,18 @@ const SidenavGroupTab = ({
 }) => {
     const TabIcon = AntDesignIcons[getSidenavTabIconName(tabName)];
 
+    const history = useHistory();
+
     const onTabClick = () => {
       setActiveScreen(tabName);
+      history.push(tabName)
     };
-
+console.log(history.location.pathname)
     return (
         <div
             className={classNames(
                 styles.groupTab,
-                activeScreen === tabName ? styles.groupTab__active : ''
+                activeScreen === tabName && history.location.pathname.includes(tabName) ? styles.groupTab__active : ''
             )}
             onClick={onTabClick}
         >

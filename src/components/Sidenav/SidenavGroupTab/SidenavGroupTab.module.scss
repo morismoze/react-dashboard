@@ -6,8 +6,7 @@
   color: var(--washed-blue);
   font-size: 12px;
   font-weight: 500;
-  position: relative;
-  transition: all .25s ease-in-out;
+  transition: all .2s ease-in-out;
   left: -12px;
   width: 95%;
 
@@ -17,8 +16,8 @@
     left: -2px;
   }
 
-  &__groupTabName {
-
+  &__groupTabName:first-letter {
+    text-transform: uppercase;
   }
 
   &:hover {
@@ -28,5 +27,17 @@
 
   &__active {
     color: var(--blue);
+  }
+
+  &__active:after {
+    content: '';
+    width: 7px;
+    height: 40px;
+    background-color: var(--blue);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
 }

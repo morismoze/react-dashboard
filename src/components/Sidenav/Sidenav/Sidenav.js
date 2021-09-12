@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { AiOutlineLogout } from 'react-icons/ai';
-
 import SidenavGroup from "../SidenavGroup/SidenavGroup";
+import SidenavGroupTab from "../SidenavGroupTab/SidenavGroupTab";
+import SidenavUserTab from "../SidenavUserTab/SidenavUserTab";
 import dashboardLogo from '../../../modules/images/logo/dashboard-logo.svg';
-import { SIDENAV_GROUPS } from "../../../constants/screenConstants";
+import {LOG_GROUP, PROFILE_GROUP, SETTINGS_GROUP, SIDENAV_GROUPS} from "../../../constants/screenConstants";
 import styles from './Sidenav.module.scss';
 
 const Sidenav = ({
@@ -27,6 +27,22 @@ const Sidenav = ({
                     key={sidenavGroupKey}
                 />
             ))}
+            <SidenavUserTab
+                tabName={PROFILE_GROUP.PROFILE_SCREEN}
+                profileImage={'higherOrderComponent'}
+                username={'Moris Moze'}
+                premiumUser={true}
+            />
+            <SidenavGroupTab
+                tabName={SETTINGS_GROUP.SETTINGS_SCREEN}
+                activeScreen={activeScreen}
+                setActiveScreen={setActiveScreen}
+            />
+            <SidenavGroupTab
+                tabName={LOG_GROUP.LOGOUT_SCREEN}
+                activeScreen={activeScreen}
+                setActiveScreen={setActiveScreen}
+            />
         </nav>
     );
 };
