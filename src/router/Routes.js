@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import DashboardScreen from "../screens/DashboardScreen/DashboardScreen";
 import SidenavContainer from "../containers/SidenavContainer";
@@ -10,6 +10,9 @@ const Routes = () => {
             <SidenavContainer/>
             <Switch>
                 <Route path={'/'} exact={true}>
+                    <Redirect to={'/dashboard'}/>
+                </Route>
+                <Route path={'/dashboard'}>
                     <DashboardScreen/>
                 </Route>
             </Switch>

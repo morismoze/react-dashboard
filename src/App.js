@@ -6,7 +6,7 @@ import {BrowserRouter} from "react-router-dom";
 import store from "./store/store";
 import Routes from "./router/Routes";
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

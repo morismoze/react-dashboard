@@ -1,12 +1,12 @@
 import React from 'react';
 
-import styles from './DashboardScreen.module.scss';
+import LayoutWrapper from "../../components/LayoutWrapper/LayoutWrapper";
 
 const DashboardScreen = () => {
     return (
-        <div className={styles.container}>
+        <LayoutWrapper>
 
-        </div>
+        </LayoutWrapper>
     );
 };
 

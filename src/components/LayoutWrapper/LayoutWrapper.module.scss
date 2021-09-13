@@ -1,0 +1,5 @@
+.screenWrapper {
+  min-height: 100vh;
+  width: calc(100% - var(--sidenav-width));
+  margin-left: var(--sidenav-width);
+}

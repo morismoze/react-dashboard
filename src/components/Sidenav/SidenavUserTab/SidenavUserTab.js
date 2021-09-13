@@ -1,29 +1,33 @@
 import React from 'react';
 
+import classNames from "classnames";
+import * as AntDesignIcons from 'react-icons/ai';
+
+import UserProfileIcon from '../../User/UserProfileIcon/UserProfileIcon';
+import {PREMIUM_STATUS} from "../../../constants/userConstants";
 import styles from './SidenavUserTab.module.scss';
-import * as AntDesignIcons from "react-icons/ai";
-import { getSidenavTabIconName } from "../../../constants/sidenavConstants";
 
 const SidenavUserTab = ({
     tabName,
     username,
     profileImage,
-    premiumUser
+    userStatus
 }) => {
-    const ProfileIcon = AntDesignIcons[getSidenavTabIconName(tabName)];
     const ArrowUpIcon = AntDesignIcons['AiOutlineUp'];
     const ArrowDownIcon = AntDesignIcons['AiOutlineDown'];
 
     return (
         <div className={styles.sidenavUserTab}>
-            <ProfileIcon
-                size={22}
-                className={styles.sidenavUserTab__icon}
+            <UserProfileIcon
+                tabName={tabName}
             />
             <div className={styles.sidenavUserTab__usernameWrapper}>
                 <span className={styles.sidenavUserTab__username}>{username}</span>
-                <span className={styles.sidenavUserTab__userRole}>
-                    {premiumUser ? 'Premium user' : 'Normal user'}
+                <span className={classNames({
+                    [styles.sidenavUserTab__userStatus]: true,
+                    [styles.sidenavUserTab__premiumUser]: userStatus === PREMIUM_STATUS
+                })}>
+                    {userStatus}
                 </span>
             </div>
             <div className={styles.sidenavUserTab__toggleWrapper}>

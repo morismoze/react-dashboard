@@ -20,12 +20,12 @@ const SidenavGroupTab = ({
       setActiveScreen(tabName);
       history.push(tabName)
     };
-console.log(history.location.pathname)
+
     return (
         <div
             className={classNames(
                 styles.groupTab,
-                activeScreen === tabName && history.location.pathname.includes(tabName) ? styles.groupTab__active : ''
+                activeScreen === tabName ? styles.groupTab__active : ''
             )}
             onClick={onTabClick}
         >

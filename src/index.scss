@@ -4,6 +4,10 @@
     --extra-light-blue: #F8F9FD;
     --blue: #3661ED;
     --washed-blue: #535a76;
+    --golden: #DAA520;
+    --dark-blue: #1E2E48;
+
+    --sidenav-width: 230px;
 }
 
 body {
@@ -11,4 +15,8 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: var(--extra-light-blue);
+}
+
+*::-webkit-scrollbar {
+    display: none;
 }

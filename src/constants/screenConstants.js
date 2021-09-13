@@ -3,7 +3,17 @@ export const ANALYTICS_GROUP = {
     PERFORMANCE_SCREEN: 'performance'
 };
 
-export const CONTENT_GROUP = {};
+export const CONTENT_GROUP = {
+    GUIDES_SCREEN: 'guides',
+    HOTSPOTS_SCREEN: 'hotspots',
+    CHECKLISTS_SCREEN: 'checklists',
+    NPS_SCREEN: 'nps'
+};
+
+export const CUSTOMIZATION_GROUP = {
+    SEGMENTS_SCREEN: 'segments',
+    THEMES_SCREEN: 'themes'
+};
 
 export const SETTINGS_GROUP = {
     SETTINGS_SCREEN: 'settings'
@@ -19,5 +29,6 @@ export const PROFILE_GROUP = {
 
 export const SIDENAV_GROUPS = {
     Analytics: ANALYTICS_GROUP,
-    Content: CONTENT_GROUP
+    Content: CONTENT_GROUP,
+    Customization: CUSTOMIZATION_GROUP
 };
