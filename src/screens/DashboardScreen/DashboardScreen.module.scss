@@ -1,4 +1,11 @@
-.container {
-    width: 100%;
-    height: 100vh;
+.dashboardScreenLayout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    overflow-y: auto;
+
+    & > div:first-of-type {
+        grid-column: 1 / 4;
+        grid-row: 1 / 3;
+    }
 }

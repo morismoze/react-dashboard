@@ -6,14 +6,22 @@ import {getSidenavTabIconName} from '../../../constants/sidenavConstants';
 import styles from './UserProfileIcon.module.scss';
 
 const UserProfileIcon = ({
-    tabName
+    tabName,
+    iconSize,
+    progress
 }) => {
     const ProfileIcon = AntDesignIcons[getSidenavTabIconName(tabName)];
 
     return (
-        <div className={styles.userProfileIcon}>
+        <div
+            className={styles.userProfileIcon}
+            style={{
+                width: iconSize,
+                height: iconSize
+            }}
+        >
             <ProfileIcon
-                size={22}
+                size={iconSize - 10}
                 className={styles.userProfileIcon__icon}
             />
         </div>

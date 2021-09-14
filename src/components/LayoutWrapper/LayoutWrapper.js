@@ -1,12 +1,19 @@
 import React from 'react';
 
 import styles from './LayoutWrapper.module.scss';
+import classNames from "classnames";
 
 const LayoutWrapper = ({
-    children
+    children,
+    className
 }) => {
     return (
-        <div className={styles.screenWrapper}>
+        <div
+            className={classNames(
+                className,
+                styles.screenWrapper
+            )}
+        >
             {children}
         </div>
     );

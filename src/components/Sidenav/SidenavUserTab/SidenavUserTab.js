@@ -19,6 +19,7 @@ const SidenavUserTab = ({
     return (
         <div className={styles.sidenavUserTab}>
             <UserProfileIcon
+                iconSize={30}
                 tabName={tabName}
             />
             <div className={styles.sidenavUserTab__usernameWrapper}>

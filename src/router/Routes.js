@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import DashboardScreen from "../screens/DashboardScreen/DashboardScreen";
 import SidenavContainer from "../containers/SidenavContainer";
+import DashboardScreen from "../screens/DashboardScreen/DashboardScreen";
+import PerformanceScreen from "../screens/PerformanceScreen/PerformanceScreen";
 
 const Routes = () => {
     return (
@@ -14,6 +15,9 @@ const Routes = () => {
                 </Route>
                 <Route path={'/dashboard'}>
                     <DashboardScreen/>
+                </Route>
+                <Route path={'/performance'}>
+                    <PerformanceScreen/>
                 </Route>
             </Switch>
         </>
