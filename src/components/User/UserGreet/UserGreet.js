@@ -10,8 +10,9 @@ const UserGreet = ({
     return (
         <div className={styles.userGreet}>
             <UserProfileIcon
-                iconSize={50}
+                iconSize={70}
                 tabName={PROFILE_GROUP.PROFILE_SCREEN}
+                progress={0.7}
             />
         </div>
     );
