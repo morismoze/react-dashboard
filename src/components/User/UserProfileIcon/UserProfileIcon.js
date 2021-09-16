@@ -4,7 +4,6 @@ import * as AntDesignIcons from 'react-icons/ai';
 
 import {getSidenavTabIconName} from '../../../constants/sidenavConstants';
 import styles from './UserProfileIcon.module.scss';
-import classNames from "classnames";
 
 const UserProfileIcon = ({
     tabName,
@@ -13,7 +12,7 @@ const UserProfileIcon = ({
 }) => {
     const ProfileIcon = AntDesignIcons[getSidenavTabIconName(tabName)];
 
-    const ICON_SIZE = iconSize - 8;
+    const ICON_SIZE = progress ? iconSize - 30 : iconSize - 12;
     const PROGRESS_CIRCLE_STROKE_WIDTH = 3;
     const PROGRESS_WRAPPER_SIZE = iconSize;
     const PROGRESS_CIRCLE_SIZE = PROGRESS_WRAPPER_SIZE / 2;
@@ -24,21 +23,27 @@ const UserProfileIcon = ({
 
     if(progress) {
         return (
-            <svg
-                className={styles.userProfileProgressWrapper}
-                width={PROGRESS_WRAPPER_SIZE}
-                height={PROGRESS_WRAPPER_SIZE}
-            >
-                <circle
-                    className={styles.userProfileProgressWrapper__progressBarCircle}
-                    strokeWidth={PROGRESS_CIRCLE_STROKE_WIDTH}
-                    r={PROGRESS_RADIUS_SIZE}
-                    cx={PROGRESS_CIRCLE_SIZE}
-                    cy={PROGRESS_CIRCLE_SIZE}
-                    strokeDasharray={circumference}
-                    strokeDashoffset={offset}
+            <div className={styles.userProfileProgressWrapper}>
+                <svg
+                    className={styles.userProfileProgressWrapper__userProfileSvg}
+                    width={PROGRESS_WRAPPER_SIZE}
+                    height={PROGRESS_WRAPPER_SIZE}
+                >
+                    <circle
+                        className={styles.userProfileProgressWrapper__progressBarCircle}
+                        strokeWidth={PROGRESS_CIRCLE_STROKE_WIDTH}
+                        r={PROGRESS_RADIUS_SIZE}
+                        cx={PROGRESS_CIRCLE_SIZE}
+                        cy={PROGRESS_CIRCLE_SIZE}
+                        strokeDasharray={circumference}
+                        strokeDashoffset={offset}
+                    />
+                </svg>
+                <ProfileIcon
+                    size={ICON_SIZE}
+                    className={styles.userProfileProgressWrapper__iconProgress}
                 />
-            </svg>
+            </div>
         );
     }
 

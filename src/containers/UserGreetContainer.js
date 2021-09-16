@@ -5,8 +5,11 @@ import { setActiveScreen } from "../store/actions/actions";
 
 const mapStateToProps = state => ({
     activeScreen: state.navigationReducer.activeScreen,
-    username: state.userReducer.username,
-    userStatus: state.userReducer.userStatus
+    firstName: state.userReducer.firstName,
+    lastName: state.userReducer.lastName,
+    userStatus: state.userReducer.userStatus,
+    activityGroup: state.userReducer.activityGroup,
+    progress: state.userReducer.progress
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -10,6 +10,11 @@ const DashboardScreen = () => {
             className={styles.dashboardScreenLayout}
         >
             <UserGreetContainer/>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </LayoutWrapper>
     );
 };
