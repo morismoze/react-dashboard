@@ -13,7 +13,7 @@ const UserProfileIcon = ({
     const ProfileIcon = AntDesignIcons[getSidenavTabIconName(tabName)];
 
     const ICON_SIZE = progress ? iconSize - 30 : iconSize - 12;
-    const PROGRESS_CIRCLE_STROKE_WIDTH = 3;
+    const PROGRESS_CIRCLE_STROKE_WIDTH = 2;
     const PROGRESS_WRAPPER_SIZE = iconSize;
     const PROGRESS_CIRCLE_SIZE = PROGRESS_WRAPPER_SIZE / 2;
     const PROGRESS_RADIUS_SIZE = PROGRESS_CIRCLE_SIZE - (PROGRESS_CIRCLE_STROKE_WIDTH * 2);
@@ -21,7 +21,7 @@ const UserProfileIcon = ({
     const circumference = PROGRESS_RADIUS_SIZE * 2 * Math.PI;
     const offset = circumference - progress * circumference;
 
-    if(progress) {
+    if (progress) {
         return (
             <div className={styles.userProfileProgressWrapper}>
                 <svg

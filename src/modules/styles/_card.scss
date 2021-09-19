@@ -1,0 +1,6 @@
+@import 'src/modules/styles/colors';
+
+@mixin card-background() {
+  background-color: $white;
+  box-shadow: rgba($dark-gray, 0.1) 0 1px 2px;;
+}

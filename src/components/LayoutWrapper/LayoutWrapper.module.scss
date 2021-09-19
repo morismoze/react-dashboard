@@ -1,5 +1,7 @@
+@import "src/modules/styles/sidenav";
+
 .screenWrapper {
   min-height: 100vh;
-  width: calc(100% - var(--sidenav-width));
-  margin-left: var(--sidenav-width);
+  width: calc(100% - $sidenav-width);
+  margin-left: $sidenav-width;
 }

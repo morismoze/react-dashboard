@@ -25,7 +25,7 @@ const SidenavGroupTab = ({
         <div
             className={classNames(
                 styles.groupTab,
-                activeScreen === tabName ? styles.groupTab__active : ''
+                { [styles.groupTab__active]: activeScreen === tabName }
             )}
             onClick={onTabClick}
         >

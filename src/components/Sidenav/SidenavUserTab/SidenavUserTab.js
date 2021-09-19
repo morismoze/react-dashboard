@@ -9,9 +9,10 @@ import styles from './SidenavUserTab.module.scss';
 
 const SidenavUserTab = ({
     tabName,
-    username,
     profileImage,
-    userStatus
+    userStatus,
+    firstName,
+    lastName
 }) => {
     const ArrowUpIcon = AntDesignIcons['AiOutlineUp'];
     const ArrowDownIcon = AntDesignIcons['AiOutlineDown'];
@@ -23,7 +24,7 @@ const SidenavUserTab = ({
                 tabName={tabName}
             />
             <div className={styles.sidenavUserTab__usernameWrapper}>
-                <span className={styles.sidenavUserTab__username}>{username}</span>
+                <span className={styles.sidenavUserTab__username}>{firstName} {lastName}</span>
                 <span className={classNames({
                     [styles.sidenavUserTab__userStatus]: true,
                     [styles.sidenavUserTab__premiumUser]: userStatus === PREMIUM_STATUS

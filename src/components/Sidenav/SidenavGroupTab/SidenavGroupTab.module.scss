@@ -1,9 +1,11 @@
+@import "src/modules/styles/colors";
+
 .groupTab {
   cursor: pointer;
   padding: 12px;
   display: flex;
   align-items: center;
-  color: var(--washed-blue);
+  color: $washed-blue;
   font-size: 12px;
   font-weight: 500;
   transition: all .15s ease-in-out;
@@ -21,19 +23,19 @@
   }
 
   &:hover {
-    background-color: var(--extra-light-blue);
+    background-color: $extra-light-blue;
     border-radius: 10px;
   }
 
   &__active {
-    color: var(--blue);
+    color: $blue;
   }
 
   &__active:after {
     content: '';
     width: 7px;
     height: 40px;
-    background-color: var(--blue);
+    background-color: $blue;
     display: inline-block;
     position: absolute;
     right: 0;

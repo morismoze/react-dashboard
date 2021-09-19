@@ -1,6 +1,8 @@
+@import "src/modules/styles/colors";
+
 .sidenavUserTab {
-  color: var(--washed-blue);
-  background-color: var(--extra-light-blue);
+  color: $washed-blue;
+  background-color: $extra-light-blue;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -31,12 +33,12 @@
   }
 
   &__userStatus {
-    color: var(--light-gray);
+    color: $light-gray;
     font-size: 10px;
   }
 
   &__premiumUser {
-    color: var(--golden);
+    color: $golden;
   }
 
   &__toggleWrapper {

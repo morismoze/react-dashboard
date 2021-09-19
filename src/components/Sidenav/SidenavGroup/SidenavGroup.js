@@ -16,10 +16,7 @@ const SidenavGroup = ({
             <ul className={styles.tabsGroup__tabsList}>
                 {Object.keys(groupTabs).map(tabKey => (
                     <li
-                        className={classNames(
-                            styles.tabsGroup__tabListElement,
-                            activeScreen === groupTabs[tabKey] ? styles.tabsGroup__active : ''
-                        )}
+                        className={styles.tabsGroup__tabListElement}
                         key={tabKey}
                     >
                         <SidenavGroupTab

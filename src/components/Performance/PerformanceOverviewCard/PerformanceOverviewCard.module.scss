@@ -1,0 +1,47 @@
+@import './src/modules/styles/colors';
+
+.performanceOverviewCard {
+  padding: 20px 50px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+
+  &:not(:first-of-type):before {
+    content: '';
+    width: 1px;
+    height: 70%;
+    background-color: rgba($light-gray, 0.2);
+    position: absolute;
+    left: 0;
+  }
+
+  &__title {
+    font-size: 13px;
+    color: $dark-blue;
+    font-weight: 500;
+  }
+
+  &__valuesWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__total {
+    font-size: 26px;
+    font-weight: 600;
+    color: $dark-blue;
+    margin-right: 10px;
+  }
+
+  &__usersTotal {
+    color: $blue;
+  }
+
+  &__interval {
+    font-size: 13px;
+    color: $light-gray;
+    font-weight: 500;
+  }
+}

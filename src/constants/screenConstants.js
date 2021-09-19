@@ -32,3 +32,10 @@ export const SIDENAV_GROUPS = {
     Content: CONTENT_GROUP,
     Customization: CUSTOMIZATION_GROUP
 };
+
+// PERFORMANCE SCREEN CONSTANTS
+
+export const GUIDE_VIEWS = 'Guide Views';
+export const CHECKLISTS = 'Checklists';
+export const HOTSPOTS = 'Hotspots';
+export const MOST_ACTIVE_USERS = 'Most Active Users';

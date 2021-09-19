@@ -1,0 +1,15 @@
+@import './src/modules/styles/card';
+
+.performanceOverviewWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 15px;
+  @include card-background();
+  max-width: 1100px;
+
+  & > div {
+    flex: 1;
+    width: 220px;
+  }
+}

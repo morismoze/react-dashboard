@@ -8,15 +8,13 @@ import PerformanceScreen from "../screens/PerformanceScreen/PerformanceScreen";
 const Routes = () => {
     return (
         <>
+            <Redirect from="/" to="/dashboard" />
             <SidenavContainer/>
             <Switch>
-                <Route path={'/'} exact={true}>
-                    <Redirect to={'/dashboard'}/>
-                </Route>
-                <Route path={'/dashboard'}>
+                <Route path={'/dashboard'} exact={true}>
                     <DashboardScreen/>
                 </Route>
-                <Route path={'/performance'}>
+                <Route path={'/performance'} exact={true}>
                     <PerformanceScreen/>
                 </Route>
             </Switch>

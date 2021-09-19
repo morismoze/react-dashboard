@@ -1,5 +1,7 @@
+@import "src/modules/styles/colors";
+
 .userProfileIcon {
-  border: 1px solid var(--light-gray);
+  border: 1px solid $light-gray;
   border-radius: 50%;
   padding: 2px;
   display: flex;
@@ -7,7 +9,7 @@
   align-items: center;
 
   &__icon {
-    fill: var(--washed-blue);
+    fill: $washed-blue;
     margin-bottom: 1px;
   }
 }
@@ -22,7 +24,7 @@
   }
 
   &__progressBarCircle {
-    stroke: var(--blue);
+    stroke: $blue;
     fill: transparent;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
@@ -34,7 +36,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
-    fill: var(--dark-blue);
+    fill: $dark-blue;
   }
 
   &__firstLetter {

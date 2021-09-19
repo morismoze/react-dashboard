@@ -10,7 +10,8 @@ import styles from './Sidenav.module.scss';
 const Sidenav = ({
     activeScreen,
     setActiveScreen,
-    username,
+    firstName,
+    lastName,
     userStatus
 }) => {
     return (
@@ -32,7 +33,8 @@ const Sidenav = ({
             <SidenavUserTab
                 tabName={PROFILE_GROUP.PROFILE_SCREEN}
                 profileImage={'higherOrderComponent'}
-                username={username}
+                firstName={firstName}
+                lastName={lastName}
                 userStatus={userStatus}
             />
             <SidenavGroupTab
