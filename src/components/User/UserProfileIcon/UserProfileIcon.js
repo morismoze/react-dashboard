@@ -4,6 +4,7 @@ import * as AntDesignIcons from 'react-icons/ai';
 
 import {getSidenavTabIconName} from '../../../constants/sidenavConstants';
 import styles from './UserProfileIcon.module.scss';
+import colors from '../../../modules/styles/colors.module.scss';
 
 const UserProfileIcon = ({
     tabName,
@@ -12,37 +13,30 @@ const UserProfileIcon = ({
 }) => {
     const ProfileIcon = AntDesignIcons[getSidenavTabIconName(tabName)];
 
-    const ICON_SIZE = progress ? iconSize - 30 : iconSize - 12;
-    const PROGRESS_CIRCLE_STROKE_WIDTH = 2;
-    const PROGRESS_WRAPPER_SIZE = iconSize;
-    const PROGRESS_CIRCLE_SIZE = PROGRESS_WRAPPER_SIZE / 2;
-    const PROGRESS_RADIUS_SIZE = PROGRESS_CIRCLE_SIZE - (PROGRESS_CIRCLE_STROKE_WIDTH * 2);
-
-    const circumference = PROGRESS_RADIUS_SIZE * 2 * Math.PI;
-    const offset = circumference - progress * circumference;
-
     if (progress) {
         return (
-            <div className={styles.userProfileProgressWrapper}>
-                <svg
-                    className={styles.userProfileProgressWrapper__userProfileSvg}
-                    width={PROGRESS_WRAPPER_SIZE}
-                    height={PROGRESS_WRAPPER_SIZE}
+            <div
+                className={styles.userProfileProgressWrapper}
+                style={{
+                    width: iconSize,
+                    height: iconSize,
+                    minWidth: iconSize,
+                    minHeight: iconSize,
+                    background: `conic-gradient(${colors.blue} 0% ${progress}%, transparent 0% ${progress}%)`
+                }}
+            >
+                <div
+                    className={styles.userProfileProgressWrapper__inner}
+                    style={{
+                        width: iconSize - 6,
+                        height: iconSize - 6,
+                    }}
                 >
-                    <circle
-                        className={styles.userProfileProgressWrapper__progressBarCircle}
-                        strokeWidth={PROGRESS_CIRCLE_STROKE_WIDTH}
-                        r={PROGRESS_RADIUS_SIZE}
-                        cx={PROGRESS_CIRCLE_SIZE}
-                        cy={PROGRESS_CIRCLE_SIZE}
-                        strokeDasharray={circumference}
-                        strokeDashoffset={offset}
+                    <ProfileIcon
+                        size={iconSize - 20}
+                        className={styles.userProfileProgressWrapper__iconProgress}
                     />
-                </svg>
-                <ProfileIcon
-                    size={ICON_SIZE}
-                    className={styles.userProfileProgressWrapper__iconProgress}
-                />
+                </div>
             </div>
         );
     }
@@ -56,7 +50,7 @@ const UserProfileIcon = ({
             }}
         >
             <ProfileIcon
-                size={ICON_SIZE}
+                size={iconSize - 12}
                 className={styles.userProfileIcon__icon}
             />
         </div>

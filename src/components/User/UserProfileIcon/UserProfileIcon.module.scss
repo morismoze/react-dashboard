@@ -15,28 +15,24 @@
 }
 
 .userProfileProgressWrapper {
-  width: fit-content;
-  height: fit-content;
-  position: relative;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background .25s ease-in-out;
 
-  &__userProfileSvg {
-
-  }
-
-  &__progressBarCircle {
-    stroke: $blue;
-    fill: transparent;
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-    transition: 0.35s stroke-dashoffset;
+  &__inner {
+    background-color: $extra-light-blue;
+    border: 1px solid $extra-light-gray;
+    box-sizing: content-box;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
   }
 
   &__iconProgress {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
+    margin-bottom: 2px;
     fill: $dark-blue;
+    z-index: 2;
   }
 
   &__firstLetter {

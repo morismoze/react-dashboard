@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import UserProfileIcon from "../UserProfileIcon/UserProfileIcon";
 import {PROFILE_GROUP} from "../../../constants/screenConstants";
@@ -11,14 +11,18 @@ const UserGreet = ({
     activityGroup,
     progress
 }) => {
-    const welcomeMessage = getCurrentHourWelcomeMessage();
+    const [welcomeMessage, setWelcomeMessage] = useState('');
+
+    useEffect(() => {
+        setWelcomeMessage(getCurrentHourWelcomeMessage());
+    }, []);
 
     return (
         <div className={styles.userGreet}>
             <UserProfileIcon
-                iconSize={65}
+                iconSize={55}
                 tabName={PROFILE_GROUP.PROFILE_SCREEN}
-                progress={progress}
+                progress={progress * 100}
                 firstName={firstName}
             />
             <div className={styles.userGreet__dataWrapper}>
