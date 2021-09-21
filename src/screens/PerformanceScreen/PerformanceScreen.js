@@ -1,10 +1,11 @@
 import React from 'react';
 
 import LayoutWrapper from "../../components/LayoutWrapper/LayoutWrapper";
-import styles from './PerformanceScreen.module.scss';
 import ScreenTitle from "../../components/ScreenTitle/ScreenTitle";
-import {ANALYTICS_GROUP} from "../../constants/screenConstants";
 import PerformanceOverviewContainer from "../../containers/PerformanceOverviewContainer";
+import PerformanceGraphContainer from "../../containers/PerformanceGraphContainer";
+import {ANALYTICS_GROUP} from "../../constants/screenConstants";
+import styles from './PerformanceScreen.module.scss';
 
 const PerformanceScreen = () => {
     return (
@@ -15,7 +16,7 @@ const PerformanceScreen = () => {
                 title={ANALYTICS_GROUP.PERFORMANCE_SCREEN}
             />
             <PerformanceOverviewContainer/>
-            <div/>
+            <PerformanceGraphContainer/>
             <div/>
             <div/>
             <div/>

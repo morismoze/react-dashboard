@@ -7,7 +7,9 @@ const INITIAL_STATE = {
             [CHECKLISTS]: { total: 680, change: -36, interval: { value: 7, unit: 'day' } },
             [HOTSPOTS]: { total: 920, change: 40, interval: { value: 7, unit: 'day' } },
             [MOST_ACTIVE_USERS]: { total: 1565, change: 45, interval: { value: 5, unit: 'year' } }
-        }
+        },
+        views: [14, 14, 8, 8, 25, 25, 40, 24, 24, 10, 25],
+        completion: [29, 29, 29, 8, 8, 8, 16, 16, 23, 16, 15]
     }
 };
 
