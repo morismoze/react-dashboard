@@ -1,0 +1,58 @@
+@import 'src/modules/styles/colors.module';
+@import 'src/modules/styles/card';
+
+.performanceCardLayoutWrapper {
+  border-radius: 25px;
+  max-width: 800px;
+  @include card-background;
+
+  &__header {
+    padding: 20px 20px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba($light-gray, 0.2);
+  }
+
+  &__cardTitle {
+    color: $dark-blue;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 12px;
+
+    &:hover .performanceCardLayoutWrapper__menuDot {
+      background-color: $dark-gray;
+    }
+  }
+
+  &__menuDot {
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: $extra-light-gray;
+    transition: background-color .15s ease-in-out;
+
+    &:nth-of-type(2) {
+      margin: 0 5px;
+    }
+  }
+
+  &__childrenWrapper {
+    padding: 15px 20px 15px;
+  }
+
+  &__footer {
+    padding: 20px 20px 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba($light-gray, 0.2);
+  }
+}
