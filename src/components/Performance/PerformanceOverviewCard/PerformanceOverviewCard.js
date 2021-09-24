@@ -3,7 +3,12 @@ import React from 'react';
 import classNames from 'classnames';
 
 import ChangeBadge from '../../ChangeBadge/ChangeBadge';
-import {CHECKLISTS, GUIDE_VIEWS, HOTSPOTS, MOST_ACTIVE_USERS} from '../../../constants/screenConstants';
+import {
+    CHECKLISTS_OVERVIEW_SUBTITLE,
+    GUIDE_VIEWS_OVERVIEW_SUBTITLE,
+    HOTSPOTS_OVERVIEW_SUBTITLE,
+    MOST_ACTIVE_USERS_OVERVIEW_SUBTITLE
+} from '../../../constants/screenConstants';
 import styles from './PerformanceOverviewCard.module.scss';
 
 const PerformanceOverviewCard = ({
@@ -16,13 +21,13 @@ const PerformanceOverviewCard = ({
         const intervalUnit = unit === 'day' ? 'Days' : 'Years';
 
         switch (property) {
-            case GUIDE_VIEWS:
+            case GUIDE_VIEWS_OVERVIEW_SUBTITLE:
                 return `Views (${value} ${intervalUnit})`;
-            case CHECKLISTS:
+            case CHECKLISTS_OVERVIEW_SUBTITLE:
                 return `Guide Trigger (${value} ${intervalUnit})`;
-            case HOTSPOTS:
+            case HOTSPOTS_OVERVIEW_SUBTITLE:
                 return `Interactions (${value} ${intervalUnit})`;
-            case MOST_ACTIVE_USERS:
+            case MOST_ACTIVE_USERS_OVERVIEW_SUBTITLE:
                 return `(Last ${value} ${intervalUnit})`;
             default:
                 return;
@@ -40,7 +45,7 @@ const PerformanceOverviewCard = ({
                 <span
                     className={classNames(
                         styles.performanceOverviewCard__total,
-                        { [styles.performanceOverviewCard__usersTotal]: property === MOST_ACTIVE_USERS }
+                        { [styles.performanceOverviewCard__usersTotal]: property === MOST_ACTIVE_USERS_OVERVIEW_SUBTITLE }
                     )}
                 >
                     {total}

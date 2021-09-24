@@ -1,0 +1,26 @@
+@import 'src/modules/styles/colors.module';
+
+.button {
+  background-color: $blue;
+  color: $white;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 45px;
+  border-radius: 10px;
+  border: 1px solid $blue;
+  font-weight: 600;
+  transition: transform .1s ease-in-out;
+
+  &:hover {
+  }
+
+  &:active {
+    transform: scale(.97);
+  }
+
+  &.noFill {
+    background-color: transparent;
+    color: $blue;
+  }
+
+}

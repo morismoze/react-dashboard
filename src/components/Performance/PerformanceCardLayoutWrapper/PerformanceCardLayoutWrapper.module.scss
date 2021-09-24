@@ -3,7 +3,6 @@
 
 .performanceCardLayoutWrapper {
   border-radius: 25px;
-  max-width: 800px;
   @include card-background;
 
   &__header {
@@ -46,6 +45,7 @@
 
   &__childrenWrapper {
     padding: 15px 20px 15px;
+    height: calc(420px - 57px - 15px - 15px);
   }
 
   &__footer {

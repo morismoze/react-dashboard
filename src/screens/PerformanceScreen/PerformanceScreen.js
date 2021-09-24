@@ -4,8 +4,11 @@ import LayoutWrapper from "../../components/LayoutWrapper/LayoutWrapper";
 import ScreenTitle from "../../components/ScreenTitle/ScreenTitle";
 import PerformanceOverviewContainer from "../../containers/PerformanceOverviewContainer";
 import PerformanceGraphContainer from "../../containers/PerformanceGraphContainer";
+import TotalViewGraphContainer from "../../containers/TotalViewGraphContainer";
 import {ANALYTICS_GROUP} from "../../constants/screenConstants";
 import styles from './PerformanceScreen.module.scss';
+import GuideListsContainer from "../../containers/GuideListsContainer";
+import TeamPerformanceContainer from "../../containers/TeamPerformanceContainer";
 
 const PerformanceScreen = () => {
     return (
@@ -17,9 +20,9 @@ const PerformanceScreen = () => {
             />
             <PerformanceOverviewContainer/>
             <PerformanceGraphContainer/>
-            <div/>
-            <div/>
-            <div/>
+            <TotalViewGraphContainer/>
+            <GuideListsContainer/>
+            <TeamPerformanceContainer/>
         </LayoutWrapper>
     );
 };

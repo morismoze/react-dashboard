@@ -3,10 +3,11 @@ import React from 'react';
 import {Line} from 'react-chartjs-2';
 
 import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
+import {TEAM_PERFORMANCE_CARD_TITLE} from "../../../constants/screenConstants";
 import colors from '../../../modules/styles/colors.module.scss';
-import styles from './PerformanceGraph.module.scss';
+import styles from './TeamPerformance.module.scss';
 
-const PerformanceGraph = ({
+const TeamPerformance = ({
     performance
 }) => {
     const data = {
@@ -26,17 +27,9 @@ const PerformanceGraph = ({
         }
     };
 
-    const headerChildren = (
-        <div className={styles.performanceGraphWrapper__labelsWrapper}>
-            <span className={styles.performanceGraphWrapper__viewCountLabel}>View Count</span>
-            <span className={styles.performanceGraphWrapper__completionCountLabel}>Completion Count</span>
-        </div>
-    );
-
     return (
         <PerformanceCardLayoutWrapper
-            cardTitle={'Guide Performance'}
-            headerChildren={headerChildren}
+            cardTitle={TEAM_PERFORMANCE_CARD_TITLE}
         >
             {/*<Line
                 data={data}
@@ -47,4 +40,4 @@ const PerformanceGraph = ({
     );
 };
 
-export default PerformanceGraph;
+export default TeamPerformance;

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import TotalViewGraph from "../components/Performance/TotalViewGraph/TotalViewGraph";
+import GuideLists from "../components/Performance/GuideLists/GuideLists";
 
 const mapStateToProps = state => ({
     performance: state.mainReducer.performance
@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(TotalViewGraph);
+)(GuideLists);

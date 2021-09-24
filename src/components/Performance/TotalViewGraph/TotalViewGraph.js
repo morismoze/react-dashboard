@@ -1,20 +1,30 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-import {Line} from 'react-chartjs-2';
+import {Doughnut} from 'react-chartjs-2';
 
-import styles from './PerformanceGraph.module.scss';
+import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
+import Button from "../../Button/Button";
+import {getSumOfArrayElements} from "../../../modules/util/general";
 import colors from '../../../modules/styles/colors.module.scss';
+import styles from './TotalViewGraph.module.scss';
 
-const PerformanceGraph = ({
-                              performance
-                          }) => {
+const TotalViewGraph = ({
+    performance
+}) => {
+    const [ totalViews, setTotalViews ] = useState(0);
+
     const data = {
+        type: 'doughnut',
         datasets: [{
-            data: performance.views
-        }, {
-            data: performance.completion,
+            data: performance.views,
+            backgroundColor: [
+                colors.blue,
+                colors.extraLightGray,
+                colors.darkGreen,
+                colors.golden
+            ],
+            borderWidth: 3
         }],
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     };
 
     const options = {
@@ -22,27 +32,48 @@ const PerformanceGraph = ({
             legend: {
                 display: false
             }
-        }
+        },
+        maintainAspectRatio: false,
+        responsive: true,
+        rotation: 86 * Math.PI,
+        circumference: 57 * Math.PI,
+        cutout: 55
     };
 
+    useEffect(() => {
+        setTotalViews(getSumOfArrayElements(performance.views));
+    }, []);
+
     return (
-        <div className={styles.performanceGraphWrapper}>
-            <div className={styles.performanceGraphWrapper__graphHeader}>
-                <span className={styles.performanceGraphWrapper__graphHeaderTitle}>Guide Performance</span>
-                <div className={styles.performanceGraphWrapper__labelsWrapper}>
-                    <span className={styles.performanceGraphWrapper__viewCountLabel}>View Count</span>
-                    <span className={styles.performanceGraphWrapper__completionCountLabel}>Completion Count</span>
-                </div>
-            </div>
-            <div className={styles.performanceGraphWrapper__graphWrapper}>
-                {/*<Line
+        <PerformanceCardLayoutWrapper
+            cardTitle={'Total View Performance'}
+            headerMenuChildren={true}
+            className={styles.totalViewPerformance}
+        >
+            <div className={styles.totalViewPerformance__graphWrapper}>
+                <Doughnut
                     data={data}
                     options={options}
-                    className={styles.performanceGraphWrapper__graph}
-                />*/}
+                    className={styles.totalViewPerformance__graph}
+                />
+                <div className={styles.totalViewPerformance__totalViewsWrapper}>
+                    <span className={styles.totalViewPerformance__totalViewsTitle}>
+                        Total count
+                    </span>
+                    <span className={styles.totalViewPerformance__totalViewsValue}>
+                        {totalViews}
+                    </span>
+                </div>
             </div>
-        </div>
+            <span className={styles.totalViewPerformance__info}>
+                Keep your info updated to increase the number of interactions.
+            </span>
+            <Button
+                buttonText={'Guide Views'}
+                backgroundFill={false}
+            />
+        </PerformanceCardLayoutWrapper>
     );
 };
 
-export default PerformanceGraph;
+export default TotalViewGraph;

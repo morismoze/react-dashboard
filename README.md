@@ -1,1 +1,2 @@
-React tracking dashboard. Built using redux, redux-saga, container-component architecture and hooks.
+React tracking dashboard. Built using Redux, *container-component* architecture and hooks (functional components).
+Data is mocked inside Redux.

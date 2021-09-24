@@ -3,8 +3,8 @@ import React from 'react';
 import * as AntDesignIcons from 'react-icons/ai';
 
 import {getSidenavTabIconName} from '../../../constants/sidenavConstants';
-import styles from './UserProfileIcon.module.scss';
 import colors from '../../../modules/styles/colors.module.scss';
+import styles from './UserProfileIcon.module.scss';
 
 const UserProfileIcon = ({
     tabName,

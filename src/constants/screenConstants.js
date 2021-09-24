@@ -33,9 +33,16 @@ export const SIDENAV_GROUPS = {
     Customization: CUSTOMIZATION_GROUP
 };
 
-// PERFORMANCE SCREEN CONSTANTS
+// PERFORMANCE OVERVIEW SCREEN CONSTANTS
 
-export const GUIDE_VIEWS = 'Guide Views';
-export const CHECKLISTS = 'Checklists';
-export const HOTSPOTS = 'Hotspots';
-export const MOST_ACTIVE_USERS = 'Most Active Users';
+export const GUIDE_VIEWS_OVERVIEW_SUBTITLE = 'Guide Views';
+export const CHECKLISTS_OVERVIEW_SUBTITLE = 'Checklists';
+export const HOTSPOTS_OVERVIEW_SUBTITLE = 'Hotspots';
+export const MOST_ACTIVE_USERS_OVERVIEW_SUBTITLE = 'Most Active Users';
+
+// PERFORMANCE CARDS TITLES
+
+export const GUIDE_PERFORMANCE_CARD_TITLE = 'Guide Performance';
+export const TOTAL_VIEW_PERFORMANCE_CARD_TITLE = 'Total View Performance';
+export const GUIDE_LISTS_CARD_TITLE = 'Guide Lists';
+export const TEAM_PERFORMANCE_CARD_TITLE = 'Team Performance';

@@ -1,0 +1,50 @@
+@import 'src/modules/styles/colors.module';
+
+.totalViewPerformance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__graphWrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin-top: -30px;
+  }
+
+  &__graph {
+  }
+
+  &__totalViewsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60%;
+  }
+
+  &__totalViewsTitle {
+    color: $light-gray;
+    font-size: 12px;
+  }
+
+  &__totalViewsValue {
+    font-size: 26px;
+    font-weight: 600;
+    color: $dark-blue;
+  }
+
+  &__info {
+    color: $light-gray;
+    font-size: 12px;
+    max-width: 220px;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  & > button {
+    margin-top: 20px;
+  }
+}

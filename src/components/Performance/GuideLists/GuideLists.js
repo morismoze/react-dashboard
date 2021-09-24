@@ -4,10 +4,10 @@ import {Line} from 'react-chartjs-2';
 
 import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
 import colors from '../../../modules/styles/colors.module.scss';
-import styles from './PerformanceGraph.module.scss';
+import styles from './GuideLists.module.scss';
 
-const PerformanceGraph = ({
-    performance
+const GuideLists = ({
+                            performance
 }) => {
     const data = {
         datasets: [{
@@ -26,17 +26,10 @@ const PerformanceGraph = ({
         }
     };
 
-    const headerChildren = (
-        <div className={styles.performanceGraphWrapper__labelsWrapper}>
-            <span className={styles.performanceGraphWrapper__viewCountLabel}>View Count</span>
-            <span className={styles.performanceGraphWrapper__completionCountLabel}>Completion Count</span>
-        </div>
-    );
-
     return (
         <PerformanceCardLayoutWrapper
-            cardTitle={'Guide Performance'}
-            headerChildren={headerChildren}
+            cardTitle={'Guide Lists'}
+            headerMenuChildren={true}
         >
             {/*<Line
                 data={data}
@@ -47,4 +40,4 @@ const PerformanceGraph = ({
     );
 };
 
-export default PerformanceGraph;
+export default GuideLists;

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import classNames from "classnames";
+
 import styles from './PerformanceCardLayoutWrapper.module.scss';
 
 const PerformanceCardLayoutWrapper = ({
@@ -7,22 +9,34 @@ const PerformanceCardLayoutWrapper = ({
     cardTitle,
     headerChildren,
     footerChildren,
-    headerMenu = true
+    headerMenuChildren,
+    className
 }) => {
+    const handleOnMenuClick = () => {
+        // @todo: implement showing menu
+        // @todo: make menuLayoutWrapper and menuLayoutItem
+    };
+
     return (
         <div className={styles.performanceCardLayoutWrapper}>
             <div className={styles.performanceCardLayoutWrapper__header}>
                 <span className={styles.performanceCardLayoutWrapper__cardTitle}> {cardTitle}</span>
                 {headerChildren}
-                {headerMenu &&
-                <span className={styles.performanceCardLayoutWrapper__menu}>
-                    <span className={styles.performanceCardLayoutWrapper__menuDot}/>
-                    <span className={styles.performanceCardLayoutWrapper__menuDot}/>
-                    <span className={styles.performanceCardLayoutWrapper__menuDot}/>
-                </span>
+                {headerMenuChildren &&
+                    <span
+                        className={styles.performanceCardLayoutWrapper__menu}
+                        onClick={handleOnMenuClick}
+                    >
+                        <span className={styles.performanceCardLayoutWrapper__menuDot}/>
+                        <span className={styles.performanceCardLayoutWrapper__menuDot}/>
+                        <span className={styles.performanceCardLayoutWrapper__menuDot}/>
+                    </span>
                 }
             </div>
-            <div className={styles.performanceCardLayoutWrapper__childrenWrapper}>
+            <div className={classNames(
+                styles.performanceCardLayoutWrapper__childrenWrapper,
+                className
+            )}>
                 {children}
             </div>
             {footerChildren &&
