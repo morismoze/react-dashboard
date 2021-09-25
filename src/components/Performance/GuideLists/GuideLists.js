@@ -5,37 +5,32 @@ import {Line} from 'react-chartjs-2';
 import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
 import colors from '../../../modules/styles/colors.module.scss';
 import styles from './GuideLists.module.scss';
+import {GUIDE_LISTS_TABLE_HEADERS} from "../../../constants/screenConstants";
 
 const GuideLists = ({
-                            performance
+    performance
 }) => {
-    const data = {
-        datasets: [{
-            data: performance.views
-        }, {
-            data: performance.completion,
-        }],
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    };
-
-    const options = {
-        plugins: {
-            legend: {
-                display: false
-            }
-        }
-    };
-
     return (
         <PerformanceCardLayoutWrapper
             cardTitle={'Guide Lists'}
             headerMenuChildren={true}
         >
-            {/*<Line
-                data={data}
-                options={options}
-                className={styles.performanceGraphWrapper__graph}
-            />*/}
+            <table>
+                <tr>
+                    {GUIDE_LISTS_TABLE_HEADERS.map(header => (
+                        <th>{header}</th>
+                    ))}
+                </tr>
+                {performance.lists.map(list => (
+                    <tr>
+                        <td>{list.id}</td>
+                        <td>{list.status}</td>
+                        <td>{list.name}</td>
+                        <td>{list.views.total} {list.views.change}</td>
+                        <td>{list.date}</td>
+                    </tr>
+                ))}
+            </table>
         </PerformanceCardLayoutWrapper>
     );
 };

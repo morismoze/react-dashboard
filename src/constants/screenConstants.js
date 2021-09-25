@@ -46,3 +46,12 @@ export const GUIDE_PERFORMANCE_CARD_TITLE = 'Guide Performance';
 export const TOTAL_VIEW_PERFORMANCE_CARD_TITLE = 'Total View Performance';
 export const GUIDE_LISTS_CARD_TITLE = 'Guide Lists';
 export const TEAM_PERFORMANCE_CARD_TITLE = 'Team Performance';
+
+// PERFORMANCE GUIDE LISTS TABLE HEADERS
+
+export const GUIDE_LISTS_TABLE_HEADERS = ['id', 'status', 'guide name', 'view', 'date']
+
+// PERFORMANCE GUIDE LISTS STATUSES
+
+export const LIVE_STATUS = 'live';
+export const DISABLED_STATUS = 'disabled';

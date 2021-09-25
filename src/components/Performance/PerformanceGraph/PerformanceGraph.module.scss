@@ -7,34 +7,8 @@
     align-items: center;
   }
 
-  &__viewCountLabel,
-  &__completionCountLabel {
-    font-size: 10px;
-    color: $dark-blue;
-    font-weight: 500;
-
-    &:before {
-      content: '';
-      border-radius: 50%;
-      height: 6px;
-      width: 6px;
-      display: inline-block;
-      margin-right: 7px;
-    }
-  }
-
   &__viewCountLabel {
-    margin-right: 25px;
-
-    &:before {
-      background-color: $blue;
-    }
-  }
-
-  &__completionCountLabel {
-    &:before {
-      background-color: $light-gray;
-    }
+    margin-right: 12px;
   }
 
   &__graph {

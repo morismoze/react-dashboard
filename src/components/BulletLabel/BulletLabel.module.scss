@@ -1,0 +1,16 @@
+@import 'src/modules/styles/colors.module';
+
+.bulletLabelWrapper {
+  display: flex;
+  align-items: center;
+
+  &__bullet {
+    border-radius: 50%;
+    margin-right: 7px;
+    margin-top: 1px;
+  }
+
+  &__bulletText {
+    font-weight: 500;
+  }
+}

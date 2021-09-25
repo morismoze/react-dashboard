@@ -1,7 +1,7 @@
 .performanceScreenLayout {
   display: grid;
   grid-template-columns: repeat(2, minmax(390px, .7fr)) minmax(400px, 1fr);
-  grid-template-rows: 60px 115px repeat(2, 420px);
+  grid-template-rows: 60px 115px repeat(2, 440px);
   gap: 30px;
   overflow-y: auto;
   padding: 0 30px 30px;

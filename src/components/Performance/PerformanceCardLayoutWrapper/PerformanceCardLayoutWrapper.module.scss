@@ -4,9 +4,12 @@
 .performanceCardLayoutWrapper {
   border-radius: 25px;
   @include card-background;
+  display: flex;
+  flex-direction: column;
 
   &__header {
     padding: 20px 20px 18px;
+    height: 57px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,11 +48,13 @@
 
   &__childrenWrapper {
     padding: 15px 20px 15px;
-    height: calc(420px - 57px - 15px - 15px);
+    height: calc(440px - 57px - 57px);
   }
 
   &__footer {
     padding: 20px 20px 18px;
+    margin-top: auto;
+    height: 57px;
     display: flex;
     justify-content: space-around;
     align-items: center;

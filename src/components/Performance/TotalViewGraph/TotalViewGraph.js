@@ -4,27 +4,29 @@ import {Doughnut} from 'react-chartjs-2';
 
 import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
 import Button from "../../Button/Button";
-import {getSumOfArrayElements} from "../../../modules/util/general";
+import BulletPoint from "../../BulletLabel/BulletLabel";
+import {GUIDE_VIEWS_OVERVIEW_SUBTITLE} from "../../../constants/screenConstants";
 import colors from '../../../modules/styles/colors.module.scss';
 import styles from './TotalViewGraph.module.scss';
 
 const TotalViewGraph = ({
     performance
 }) => {
-    const [ totalViews, setTotalViews ] = useState(0);
+    const [ currentIntervalTotalViews, setCurrentIntervalTotalViews ] = useState(0);
+
+    const [ previousIntervalViews, setPreviousIntervalViews ] = useState(0);
 
     const data = {
         type: 'doughnut',
         datasets: [{
-            data: performance.views,
+            data: [currentIntervalTotalViews, previousIntervalViews],
             backgroundColor: [
                 colors.blue,
-                colors.extraLightGray,
-                colors.darkGreen,
-                colors.golden
+                colors.cyan
             ],
-            borderWidth: 3
-        }],
+            borderWidth: 5,
+            hoverOffset: 5
+        }]
     };
 
     const options = {
@@ -37,17 +39,39 @@ const TotalViewGraph = ({
         responsive: true,
         rotation: 86 * Math.PI,
         circumference: 57 * Math.PI,
-        cutout: 55
+        cutout: 60
     };
 
+    const footerChildren = (
+        <div className={styles.totalViewPerformance__footer}>
+            <BulletPoint
+                bulletText={'Current Week View Count'}
+                bulletBackgroundColor={colors.blue}
+                bulletSize={8}
+                bulletTextSize={12}
+                bulletTextColor={colors.lightGray}
+                className={styles.totalViewPerformance__currentWeekViewCountLabel}
+            />
+            <BulletPoint
+                bulletText={'Last Week View Count'}
+                bulletSize={8}
+                bulletTextSize={12}
+                bulletTextColor={colors.lightGray}
+                bulletBackgroundColor={colors.cyan}
+            />
+        </div>
+    );
+
     useEffect(() => {
-        setTotalViews(getSumOfArrayElements(performance.views));
+        setCurrentIntervalTotalViews(performance.overview[GUIDE_VIEWS_OVERVIEW_SUBTITLE].total);
+        setPreviousIntervalViews(performance.totalView.previousIntervalViews.total);
     }, []);
 
     return (
         <PerformanceCardLayoutWrapper
             cardTitle={'Total View Performance'}
             headerMenuChildren={true}
+            footerChildren={footerChildren}
             className={styles.totalViewPerformance}
         >
             <div className={styles.totalViewPerformance__graphWrapper}>
@@ -61,7 +85,7 @@ const TotalViewGraph = ({
                         Total count
                     </span>
                     <span className={styles.totalViewPerformance__totalViewsValue}>
-                        {totalViews}
+                        {currentIntervalTotalViews}
                     </span>
                 </div>
             </div>

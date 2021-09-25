@@ -13,6 +13,7 @@ $light-green: #DFFAEF;
 $dark-green: #105E27;
 $light-red: #FDEEEC;
 $dark-red: #B10000;
+$cyan: #52E1E3;
 
 :export {
   white: $white;
@@ -28,4 +29,5 @@ $dark-red: #B10000;
   darkGreen: $dark-green;
   lightRed: $light-red;
   darkRed: $dark-red;
+  cyan: $cyan;
 }

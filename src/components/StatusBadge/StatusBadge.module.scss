@@ -1,0 +1,27 @@
+@import "src/modules/styles/colors";
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 5px;
+  border-radius: 15px;
+  width: 45px;
+  font-size: 11px;
+  font-weight: 500;
+
+  &__bullet {
+    width: 6px;
+    height: 6px;
+  }
+
+  &__statusLive {
+    background-color: $light-green;
+    color: $dark-green;
+  }
+
+  &__statusLive {
+    background-color: $extra-light-gray;
+    color: $light-gray;
+  }
+}

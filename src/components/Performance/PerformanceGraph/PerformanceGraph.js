@@ -5,6 +5,7 @@ import {Line} from 'react-chartjs-2';
 import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
 import colors from '../../../modules/styles/colors.module.scss';
 import styles from './PerformanceGraph.module.scss';
+import BulletPoint from "../../BulletLabel/BulletLabel";
 
 const PerformanceGraph = ({
     performance
@@ -28,8 +29,15 @@ const PerformanceGraph = ({
 
     const headerChildren = (
         <div className={styles.performanceGraphWrapper__labelsWrapper}>
-            <span className={styles.performanceGraphWrapper__viewCountLabel}>View Count</span>
-            <span className={styles.performanceGraphWrapper__completionCountLabel}>Completion Count</span>
+            <BulletPoint
+                bulletText={'View Count'}
+                bulletBackgroundColor={colors.blue}
+                className={styles.performanceGraphWrapper__viewCountLabel}
+            />
+            <BulletPoint
+                bulletText={'Completion Count'}
+                bulletBackgroundColor={colors.lightGray}
+            />
         </div>
     );
 
