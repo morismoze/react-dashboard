@@ -49,6 +49,12 @@
   &__childrenWrapper {
     padding: 15px 20px 15px;
     height: calc(440px - 57px - 57px);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  &__childrenWrapperNoFooter {
+    height: calc(440px - 57px);
   }
 
   &__footer {

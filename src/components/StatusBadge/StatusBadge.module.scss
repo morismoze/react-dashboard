@@ -4,24 +4,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3px 5px;
+  padding: 4px 10px;
   border-radius: 15px;
-  width: 45px;
   font-size: 11px;
   font-weight: 500;
+  width: fit-content;
+
+  &.statusLive {
+    background-color: $light-green;
+    color: $dark-green;
+
+    .statusBadge__bullet {
+      background-color: $dark-green;
+    }
+  }
+
+  &.statusDisabled {
+    background-color: rgba($extra-light-gray, .4);
+    color: $dark-gray;
+
+    .statusBadge__bullet {
+      background-color: $dark-gray;
+    }
+  }
 
   &__bullet {
     width: 6px;
     height: 6px;
+    border-radius: 50%;
+    margin-right: 3px;
   }
 
-  &__statusLive {
-    background-color: $light-green;
-    color: $dark-green;
-  }
-
-  &__statusLive {
-    background-color: $extra-light-gray;
-    color: $light-gray;
+  &__status {
+    &:first-letter {
+      text-transform: uppercase;
+    }
   }
 }

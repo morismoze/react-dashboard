@@ -49,7 +49,13 @@ export const TEAM_PERFORMANCE_CARD_TITLE = 'Team Performance';
 
 // PERFORMANCE GUIDE LISTS TABLE HEADERS
 
-export const GUIDE_LISTS_TABLE_HEADERS = ['id', 'status', 'guide name', 'view', 'date']
+export const GUIDE_LISTS_ID = 'id';
+export const GUIDE_LISTS_STATUS = 'status';
+export const GUIDE_LISTS_GUIDE_NAME = 'guide name';
+export const GUIDE_LISTS_VIEW = 'views';
+export const GUIDE_LISTS_DATE = 'date';
+
+export const GUIDE_LISTS_TABLE_HEADERS = [GUIDE_LISTS_ID, GUIDE_LISTS_STATUS, GUIDE_LISTS_GUIDE_NAME, GUIDE_LISTS_VIEW, GUIDE_LISTS_DATE]
 
 // PERFORMANCE GUIDE LISTS STATUSES
 

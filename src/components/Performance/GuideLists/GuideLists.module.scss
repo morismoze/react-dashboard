@@ -1,0 +1,98 @@
+@import "src/modules/styles/colors";
+
+.guideListTable {
+  width: 100%;
+  word-break: break-word;
+
+  &__headerRow {
+    position: sticky;
+    top: -15px;
+    background-color: $white;
+    z-index: 2;
+  }
+
+  &__headerCell {
+    text-align: left;
+    text-transform: uppercase;
+    color: $light-gray;
+    font-size: 10px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    padding-top: 5px;
+    background-color: $white;
+  }
+
+  &__nameHeaderCell {
+    max-width: 250px;
+    min-width: 250px;
+  }
+
+  &__bodyRow {}
+
+  &__bodyCell {
+    text-align: left;
+    font-size: 14px;
+    color: $dark-blue;
+    height: 20px;
+    padding-bottom: 30px;
+    font-weight: 500;
+
+    &:not(:last-of-type) {
+      padding-right: 35px;
+    }
+  }
+
+  &__nameBodyCell {
+    cursor: pointer;
+    max-width: 250px;
+    max-height: 36px;
+
+    &:hover:not(.guideListTable__disabledNameBodyCell ) {
+      opacity: .9;
+    }
+
+    .guideListTable__name {
+      text-decoration: underline;
+    }
+  }
+
+  &__disabledNameBodyCell {
+    cursor: default;
+
+    .guideListTable__name {
+      text-decoration: none;
+    }
+  }
+
+  &__name {
+    max-height: 36px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  &__viewsContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  &__viewsWrapper {
+    display: flex;
+    align-items: center;
+    color: $light-gray;
+  }
+
+  &__viewsIcon {}
+
+  &__views {
+    margin: 0 15px 0 5px;
+  }
+
+  &__dateBodyCell {
+    color: $light-gray;
+    white-space: nowrap;
+  }
+}

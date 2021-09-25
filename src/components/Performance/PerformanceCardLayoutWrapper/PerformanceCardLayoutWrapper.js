@@ -35,6 +35,7 @@ const PerformanceCardLayoutWrapper = ({
             </div>
             <div className={classNames(
                 styles.performanceCardLayoutWrapper__childrenWrapper,
+                { [styles.performanceCardLayoutWrapper__childrenWrapperNoFooter]: !footerChildren },
                 className
             )}>
                 {children}
