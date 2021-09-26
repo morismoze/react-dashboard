@@ -2,7 +2,8 @@ import {
     CHECKLISTS_OVERVIEW_SUBTITLE,
     GUIDE_VIEWS_OVERVIEW_SUBTITLE,
     HOTSPOTS_OVERVIEW_SUBTITLE,
-    MOST_ACTIVE_USERS_OVERVIEW_SUBTITLE
+    MOST_ACTIVE_USERS_OVERVIEW_SUBTITLE,
+
 } from "../../constants/screenConstants";
 
 const INITIAL_STATE = {
@@ -62,7 +63,7 @@ const INITIAL_STATE = {
                 date: '25 May 2021'
             },
             {
-                id: '#89325',
+                id: '#89326',
                 status: 'live',
                 name: 'Create you first guide',
                 views: {
@@ -72,7 +73,7 @@ const INITIAL_STATE = {
                 date: '20 May 2021'
             },
             {
-                id: '#53262',
+                id: '#53263',
                 status: 'live',
                 name: 'Install Chrome extension',
                 views: {
@@ -82,7 +83,7 @@ const INITIAL_STATE = {
                 date: '22 May 2021'
             },
             {
-                id: '#64251',
+                id: '#64254',
                 status: 'disabled',
                 name: 'How to use NPM',
                 views: {
@@ -92,7 +93,7 @@ const INITIAL_STATE = {
                 date: '23 May 2021'
             },
             {
-                id: '#32673',
+                id: '#32675',
                 status: 'disabled',
                 name: 'Unlock your FB profile',
                 views: {
@@ -102,7 +103,7 @@ const INITIAL_STATE = {
                 date: '25 May 2021'
             },
             {
-                id: '#89325',
+                id: '#89327',
                 status: 'disabled',
                 name: 'Create you first guide',
                 views: {
@@ -112,7 +113,7 @@ const INITIAL_STATE = {
                 date: '20 May 2021'
             },
             {
-                id: '#53262',
+                id: '#53267',
                 status: 'live',
                 name: 'Install Chrome extension',
                 views: {
@@ -122,7 +123,7 @@ const INITIAL_STATE = {
                 date: '22 May 2021'
             },
             {
-                id: '#64251',
+                id: '#64258',
                 status: 'disabled',
                 name: 'How to use NPM',
                 views: {
@@ -132,7 +133,7 @@ const INITIAL_STATE = {
                 date: '23 May 2021'
             },
             {
-                id: '#32673',
+                id: '#32679',
                 status: 'disabled',
                 name: 'Unlock your FB profile',
                 views: {
@@ -140,6 +141,154 @@ const INITIAL_STATE = {
                     change: 1
                 },
                 date: '25 May 2021'
+            }
+        ],
+        teams: [
+            {
+                id: 'a123#',
+                name: 'Userguide Team',
+                members: [
+                    {
+                        id: '123#',
+                        name: 'Lillian Burke',
+                        pictureLink: 'https://randomuser.me/api/portraits/women/55.jpg',
+                    },
+                    {
+                        id: '456#',
+                        name: 'Alexis Lo',
+                        pictureLink: 'https://randomuser.me/api/portraits/men/22.jpg',
+                    },
+                    {
+                        id: '789#',
+                        name: 'Johannes Laurent',
+                        pictureLink: 'https://randomuser.me/api/portraits/men/42.jpg',
+                    }
+                ],
+                performancePercentage: '0.52',
+                views: '460'
+            },
+            {
+                id: 'b456#',
+                name: 'Rantas NT Group',
+                members: [
+                    {
+                        id: '101#',
+                        name: 'Brian Johnston',
+                        pictureLink: 'https://randomuser.me/api/portraits/men/64.jpg',
+                    },
+                    {
+                        id: '112#',
+                        name: 'Iina Saksa',
+                        pictureLink: 'https://randomuser.me/api/portraits/women/78.jpg',
+                    },
+                ],
+                performancePercentage: '0.46',
+                views: '120'
+            },
+            {
+                id: 'c789#',
+                name: 'Userguide Group Rantas',
+                members: [
+                    {
+                        id: '131#',
+                        name: 'Alberte Pedersen',
+                        pictureLink: 'https://randomuser.me/api/portraits/women/16.jpg'
+                    },
+                    {
+                        id: '415#',
+                        name: 'Elsa Nikula',
+                        pictureLink: 'https://randomuser.me/api/portraits/women/92.jpg'
+                    },
+                    {
+                        id: '161#',
+                        name: 'Svein Bergene',
+                        pictureLink: 'https://randomuser.me/api/portraits/men/15.jpg'
+                    }
+                ],
+                performancePercentage: '0.78',
+                views: '4600'
+            },
+            {
+                id: 'c987#',
+                name: 'Userguide Group Rantas',
+                members: [
+                    {
+                        id: '131#',
+                        name: 'Alberte Pedersen',
+                        pictureLink: 'https://randomuser.me/api/portraits/women/16.jpg'
+                    },
+                    {
+                        id: '415#',
+                        name: 'Elsa Nikula',
+                        pictureLink: 'https://randomuser.me/api/portraits/women/92.jpg'
+                    },
+                    {
+                        id: '161#',
+                        name: 'Svein Bergene',
+                        pictureLink: 'https://randomuser.me/api/portraits/men/15.jpg'
+                    }
+                ],
+                performancePercentage: '0.78',
+                views: '4600'
+            },
+            {
+                id: 'b546#',
+                name: 'Rantas NT Group',
+                members: [
+                    {
+                        id: '101#',
+                        name: 'Brian Johnston',
+                        pictureLink: 'https://randomuser.me/api/portraits/men/64.jpg',
+                    },
+                    {
+                        id: '112#',
+                        name: 'Iina Saksa',
+                        pictureLink: 'https://randomuser.me/api/portraits/women/78.jpg',
+                    },
+                ],
+                performancePercentage: '0.46',
+                views: '120'
+            },
+            {
+                id: 'b654#',
+                name: 'Rantas NT Group',
+                members: [
+                    {
+                        id: '101#',
+                        name: 'Brian Johnston',
+                        pictureLink: 'https://randomuser.me/api/portraits/men/64.jpg',
+                    },
+                    {
+                        id: '112#',
+                        name: 'Iina Saksa',
+                        pictureLink: 'https://randomuser.me/api/portraits/women/78.jpg',
+                    },
+                ],
+                performancePercentage: '0.46',
+                views: '120'
+            },
+            {
+                id: 'a321#',
+                name: 'Userguide Team',
+                members: [
+                    {
+                        id: '123#',
+                        name: 'Lillian Burke',
+                        pictureLink: 'https://randomuser.me/api/portraits/women/55.jpg',
+                    },
+                    {
+                        id: '456#',
+                        name: 'Alexis Lo',
+                        pictureLink: 'https://randomuser.me/api/portraits/men/22.jpg',
+                    },
+                    {
+                        id: '789#',
+                        name: 'Johannes Laurent',
+                        pictureLink: 'https://randomuser.me/api/portraits/men/42.jpg',
+                    }
+                ],
+                performancePercentage: '0.52',
+                views: '460'
             }
         ]
     }

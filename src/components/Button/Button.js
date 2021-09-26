@@ -1,6 +1,5 @@
 import React from 'react';
 
-import colors from '../../modules/styles/colors.module.scss';
 import styles from './Button.module.scss';
 import classNames from "classnames";
 

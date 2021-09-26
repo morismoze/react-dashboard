@@ -1,41 +1,25 @@
 import React from 'react';
 
-import {Line} from 'react-chartjs-2';
-
 import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
+import TeamCard from "../TeamCard/TeamCard";
 import {TEAM_PERFORMANCE_CARD_TITLE} from "../../../constants/screenConstants";
-import colors from '../../../modules/styles/colors.module.scss';
-import styles from './TeamPerformance.module.scss';
 
 const TeamPerformance = ({
     performance
 }) => {
-    const data = {
-        datasets: [{
-            data: performance.views
-        }, {
-            data: performance.completion,
-        }],
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    };
-
-    const options = {
-        plugins: {
-            legend: {
-                display: false
-            }
-        }
-    };
-
     return (
         <PerformanceCardLayoutWrapper
             cardTitle={TEAM_PERFORMANCE_CARD_TITLE}
         >
-            {/*<Line
-                data={data}
-                options={options}
-                className={styles.performanceGraphWrapper__graph}
-            />*/}
+            {performance.teams.map(team => (
+                <TeamCard
+                    teamName={team.name}
+                    performancePercentage={team.performancePercentage * 100}
+                    members={team.members}
+                    views={team.views}
+                    key={team.id}
+                />
+            ))}
         </PerformanceCardLayoutWrapper>
     );
 };

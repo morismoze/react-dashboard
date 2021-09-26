@@ -1,0 +1,130 @@
+@import "src/modules/styles/colors.module";
+
+.teamInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 15px;
+  width: 150px;
+
+  &__name {
+    color: $dark-blue;
+    font-weight: 600;
+    font-size: 14px;
+    max-width: 125px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 10px;
+  }
+
+  &__dataWrapper {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: $light-gray;
+  }
+
+  &__performancePercentage {
+
+  }
+
+  &__dataBullet {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: $light-gray;
+    margin: 0 10px;
+  }
+
+  &__views {
+
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 2px;
+  }
+
+  &[line-color='blue'] {
+    &:before {
+      background-color: $blue;
+    }
+  }
+
+  &[line-color='darkBlue'] {
+    &:before {
+      background-color: $dark-blue;
+    }
+  }
+
+  &[line-color='lightGray'] {
+    &:before {
+      background-color: $light-gray;
+    }
+  }
+
+  &[line-color='extraLightGray'] {
+    &:before {
+      background-color: $extra-light-gray;
+    }
+  }
+
+  &[line-color='extraLightBlue'] {
+    &:before {
+      background-color: $extra-light-blue;
+    }
+  }
+
+  &[line-color='washedBlue'] {
+    &:before {
+      background-color: $washed-blue;
+    }
+  }
+
+  &[line-color='golden'] {
+    &:before {
+      background-color: $golden;
+    }
+  }
+
+  &[line-color='darkGray'] {
+    &:before {
+      background-color: $dark-gray;
+    }
+  }
+
+  &[line-color='lightGreen'] {
+    &:before {
+      background-color: $light-green;
+    }
+  }
+
+  &[line-color='darkGreen'] {
+    &:before {
+      background-color: $dark-green;
+    }
+  }
+
+  &[line-color='lightRed'] {
+    &:before {
+      background-color: $light-red;
+    }
+  }
+
+  &[line-color='darkRed'] {
+    &:before {
+      background-color: $dark-red;
+    }
+  }
+
+  &[line-color='cyan'] {
+    &:before {
+      background-color: $cyan;
+    }
+  }
+}
