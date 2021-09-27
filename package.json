@@ -46,6 +46,5 @@
   },
   "devDependencies": {
     "sass": "^1.39.2"
-  },
-  "homepage": "/dashboard"
+  }
 }
