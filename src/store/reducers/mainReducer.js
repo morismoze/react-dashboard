@@ -15,8 +15,8 @@ const INITIAL_STATE = {
             [MOST_ACTIVE_USERS_OVERVIEW_SUBTITLE]: { total: 1565, change: 45, interval: { value: 5, unit: 'year' } }
         },
         guide: {
-            views: [14, 14, 8, 8, 25, 25, 40, 24, 24, 10, 25],
-            completion: [29, 29, 29, 8, 8, 8, 16, 16, 23, 16, 15]
+            views: [14, 14, 16, 16, 25, 25, 40, 24, 24, 10, 25, 30],
+            completion: [29, 29, 29, 8, 8, 8, 16, 16, 23, 25, 30, 32]
         },
         totalView: {
             previousIntervalViews: { total: 1987, change: 23, interval: { value: 7, unit: 'day' } }
