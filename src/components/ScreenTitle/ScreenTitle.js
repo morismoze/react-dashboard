@@ -1,17 +1,27 @@
 import React from 'react';
 
+import { Slide } from "@mui/material";
+
 import styles from './ScreenTitle.module.scss';
 
 const ScreenTitle = ({
-    title
+    title,
+    slideTimeout,
+    slideDirection
 }) => {
     return (
-        <h1
-            className={styles.screenTitle}
+        <Slide
+            in={true}
+            timeout={slideTimeout}
+            direction={slideDirection}
         >
-            {title}
-            <span className={styles.screenTitle__overview}>Overview</span>
-        </h1>
+            <h1
+                className={styles.screenTitle}
+            >
+                {title}
+                <span className={styles.screenTitle__overview}>Overview</span>
+            </h1>
+        </Slide>
     );
 };
 

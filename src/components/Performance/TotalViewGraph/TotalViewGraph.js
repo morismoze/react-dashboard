@@ -73,6 +73,7 @@ const TotalViewGraph = ({
             headerMenuChildren={true}
             footerChildren={footerChildren}
             className={styles.totalViewPerformance}
+            fadeTimeout={650}
         >
             <div className={styles.totalViewPerformance__graphWrapper}>
                 <Doughnut

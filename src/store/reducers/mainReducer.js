@@ -6,6 +6,7 @@ import {
 
 } from "../../constants/screenConstants";
 
+// @todo: transfer every property of initial state to its own reducer !!!
 const INITIAL_STATE = {
     performance: {
         overview: {
@@ -162,6 +163,11 @@ const INITIAL_STATE = {
                         id: '789#',
                         name: 'Johannes Laurent',
                         pictureLink: 'https://randomuser.me/api/portraits/men/42.jpg',
+                    },
+                    {
+                        id: '112#',
+                        name: 'Iina Saksa',
+                        pictureLink: 'https://randomuser.me/api/portraits/women/78.jpg',
                     }
                 ],
                 performancePercentage: '0.52',
@@ -180,7 +186,7 @@ const INITIAL_STATE = {
                         id: '112#',
                         name: 'Iina Saksa',
                         pictureLink: 'https://randomuser.me/api/portraits/women/78.jpg',
-                    },
+                    }
                 ],
                 performancePercentage: '0.46',
                 views: '120'
@@ -244,7 +250,7 @@ const INITIAL_STATE = {
                         id: '112#',
                         name: 'Iina Saksa',
                         pictureLink: 'https://randomuser.me/api/portraits/women/78.jpg',
-                    },
+                    }
                 ],
                 performancePercentage: '0.46',
                 views: '120'
@@ -262,7 +268,7 @@ const INITIAL_STATE = {
                         id: '112#',
                         name: 'Iina Saksa',
                         pictureLink: 'https://randomuser.me/api/portraits/women/78.jpg',
-                    },
+                    }
                 ],
                 performancePercentage: '0.46',
                 views: '120'

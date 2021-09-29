@@ -17,6 +17,8 @@ const PerformanceScreen = () => {
         >
             <ScreenTitle
                 title={ANALYTICS_GROUP.PERFORMANCE_SCREEN}
+                slideTimeout={300}
+                slideDirection={'down'}
             />
             <PerformanceOverviewContainer/>
             <PerformanceGraphContainer/>

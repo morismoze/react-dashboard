@@ -10,12 +10,14 @@ const TeamPerformance = ({
     return (
         <PerformanceCardLayoutWrapper
             cardTitle={TEAM_PERFORMANCE_CARD_TITLE}
+            fadeTimeout={650}
         >
             {performance.teams.map(team => (
                 <TeamCard
                     teamName={team.name}
                     performancePercentage={team.performancePercentage * 100}
                     members={team.members}
+                    numberOfMembersShown={3}
                     views={team.views}
                     key={team.id}
                 />

@@ -20,6 +20,7 @@ const GuideLists = ({
         <PerformanceCardLayoutWrapper
             cardTitle={'Guide Lists'}
             headerMenuChildren={true}
+            fadeTimeout={650}
         >
             <table className={styles.guideListTable}>
                 <thead className={styles.guideListTable__headerRow}>

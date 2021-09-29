@@ -68,6 +68,7 @@ const PerformanceGraph = ({
         <PerformanceCardLayoutWrapper
             cardTitle={'Guide Performance'}
             headerChildren={headerChildren}
+            fadeTimeout={650}
         >
             <Line
                 data={data}

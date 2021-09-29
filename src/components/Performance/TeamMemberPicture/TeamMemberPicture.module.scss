@@ -1,8 +1,23 @@
 @import "src/modules/styles/colors.module";
 
-.teamMemberPicture {
+.teamMemberPicture,
+.remainingNumberOfMembersWrapper {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 2px solid $white;
+}
+
+.remainingNumberOfMembersWrapper {
+  font-size: 16px;
+  background-color: $dark-blue;
+  color: $white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remainingNumberOfMembers {
+
 }
