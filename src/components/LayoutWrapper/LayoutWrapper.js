@@ -1,17 +1,22 @@
 import React from 'react';
 
-import styles from './LayoutWrapper.module.scss';
+import { useSelector } from "react-redux";
 import classNames from "classnames";
+
+import styles from './LayoutWrapper.module.scss';
 
 const LayoutWrapper = ({
     children,
     className
 }) => {
+    const isSidebarCollapsed = useSelector(state => state.navigationReducer.isSidebarCollapsed);
+
     return (
         <div
             className={classNames(
-                className,
-                styles.screenWrapper
+                styles.screenWrapper,
+                { [styles.collapsedSidenav]: isSidebarCollapsed },
+                className
             )}
         >
             {children}

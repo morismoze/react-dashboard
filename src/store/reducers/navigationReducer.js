@@ -1,10 +1,12 @@
 import { ANALYTICS_GROUP } from "../../constants/screenConstants";
 import {
-    SET_ACTIVE_SCREEN
+    SET_ACTIVE_SCREEN,
+    TOGGLE_SIDEBAR
 } from "../actions/actionTypes";
 
-const INITIAL_STATE = {
-    activeScreen: ANALYTICS_GROUP.DASHBOARD_SCREEN
+export const INITIAL_STATE = {
+    activeScreen: ANALYTICS_GROUP.DASHBOARD_SCREEN,
+    isSidebarCollapsed: false
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -13,6 +15,13 @@ export default (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 activeScreen: action.screenId
+            }
+        }
+
+        case TOGGLE_SIDEBAR: {
+            return {
+                ...state,
+                isSidebarCollapsed: !state.isSidebarCollapsed
             }
         }
         default:

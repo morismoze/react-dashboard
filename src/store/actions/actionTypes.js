@@ -1,1 +1,3 @@
 export const SET_ACTIVE_SCREEN = 'SET_ACTIVE_SCREEN';
+
+export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';

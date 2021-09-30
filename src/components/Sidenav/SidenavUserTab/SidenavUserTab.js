@@ -1,8 +1,11 @@
 import React from 'react';
 
+import {useHistory} from "react-router-dom";
+
 import classNames from "classnames";
 import * as AntDesignIcons from 'react-icons/ai';
 
+import SidenavGroupTab from "../SidenavGroupTab/SidenavGroupTab";
 import UserProfileIcon from '../../User/UserProfileIcon/UserProfileIcon';
 import {PREMIUM_STATUS} from "../../../constants/userConstants";
 import styles from './SidenavUserTab.module.scss';
@@ -12,13 +15,37 @@ const SidenavUserTab = ({
     profileImage,
     userStatus,
     firstName,
-    lastName
+    lastName,
+    isSidebarCollapsed,
+    activeScreen,
+    setActiveScreen
 }) => {
+    const history = useHistory();
+
     const ArrowUpIcon = AntDesignIcons['AiOutlineUp'];
     const ArrowDownIcon = AntDesignIcons['AiOutlineDown'];
 
+    if(isSidebarCollapsed) {
+        return (
+            <SidenavGroupTab
+                tabName={tabName}
+                isSidebarCollapsed={isSidebarCollapsed}
+                activeScreen={activeScreen}
+                setActiveScreen={setActiveScreen}
+            />
+        );
+    }
+
+    const onTabClick = () => {
+        setActiveScreen(tabName);
+        history.push(tabName)
+    };
+
     return (
-        <div className={styles.sidenavUserTab}>
+        <div
+            className={styles.sidenavUserTab}
+            onClick={onTabClick}
+        >
             <UserProfileIcon
                 iconSize={30}
                 tabName={tabName}

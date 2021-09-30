@@ -13,12 +13,63 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  transition: width .2s ease-in-out !important;
 
   @include card-background();
 
-  &__logo {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 30px;
+  }
+
+  &__collapseIconWrapper {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark-blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__collapseIcon {
+    transition: transform .35s ease-in-out;
+    color: $white;
+  }
+
+  &__logo {
     width: 40px;
     height: 40px;
+  }
+
+  /*
+    COLLAPSED SIDEBAR STYLING
+  */
+
+  &--collapsed {
+    width: $collapsed-sidenav-width;
+    transition: width .3s cubic-bezier(0, 0, 0.2, 1) !important;
+    padding: 25px 8px;
+
+    &__header {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    &__logo {
+      margin-bottom: 10px;
+    }
+
+    &__collapseIconWrapper {
+      margin-right: 0;
+    }
+
+    &__collapseIcon {
+      transform: rotate(180deg);
+    }
   }
 }

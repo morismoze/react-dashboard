@@ -12,6 +12,7 @@ import SegmentsScreen from "../screens/SegmentsScreen/SegmentsScreen";
 import ThemesScreen from "../screens/ThemesScreen/ThemesScreen";
 import SettingsScreen from "../screens/SettingsScreen/SettingsScreen";
 import LogoutScreen from "../screens/LogoutScreen/LogoutScreen";
+import ProfileScreen from "../screens/ProfileScreen/ProfileScreen";
 
 const Routes = () => {
     return (
@@ -42,6 +43,9 @@ const Routes = () => {
                 </Route>
                 <Route path={'/themes'} exact={true}>
                     <ThemesScreen/>
+                </Route>
+                <Route path={'/profile'} exact={true}>
+                    <ProfileScreen/>
                 </Route>
                 <Route path={'/settings'} exact={true}>
                     <SettingsScreen/>

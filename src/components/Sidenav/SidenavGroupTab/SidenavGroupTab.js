@@ -1,16 +1,20 @@
 import React from 'react';
+
 import { useHistory } from 'react-router-dom';
+import classNames from "classnames";
 
 import * as AntDesignIcons from 'react-icons/ai';
 
 import { getSidenavTabIconName } from "../../../constants/sidenavConstants";
 import styles from './SidenavGroupTab.module.scss';
-import classNames from "classnames";
+import {Tooltip} from "@mui/material";
+import {capitalizeFirstLetter} from "../../../modules/util/stringManipulation";
 
 const SidenavGroupTab = ({
     tabName,
     activeScreen,
-    setActiveScreen
+    setActiveScreen,
+    isSidebarCollapsed
 }) => {
     const TabIcon = AntDesignIcons[getSidenavTabIconName(tabName)];
 
@@ -22,19 +26,29 @@ const SidenavGroupTab = ({
     };
 
     return (
-        <div
-            className={classNames(
-                styles.groupTab,
-                { [styles.groupTab__active]: activeScreen === tabName }
-            )}
-            onClick={onTabClick}
+        <Tooltip
+            title={isSidebarCollapsed ? capitalizeFirstLetter(tabName) : ''}
+            arrow={true}
+            placement={'right'}
         >
-            <TabIcon
-                size={22}
-                className={styles.groupTab__icon}
-            />
-            <span className={styles.groupTab__groupTabName}>{tabName}</span>
-        </div>
+            <div
+                className={classNames(
+                    styles.groupTab,
+                    { [styles.groupTab__active]: activeScreen === tabName },
+                    { [styles.groupTabCollapsedSidenav]: isSidebarCollapsed }
+                )}
+                onClick={onTabClick}
+            >
+
+                <TabIcon
+                    size={22}
+                    className={styles.groupTab__icon}
+                />
+                {!isSidebarCollapsed &&
+                    <span className={styles.groupTab__groupTabName}>{capitalizeFirstLetter(tabName)}</span>
+                }
+            </div>
+        </Tooltip>
     );
 };
 

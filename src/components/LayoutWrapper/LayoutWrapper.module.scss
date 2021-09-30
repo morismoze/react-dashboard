@@ -4,4 +4,11 @@
   min-height: 100vh;
   width: calc(100% - #{$sidenav-width});
   margin-left: $sidenav-width;
+  transition: width .3s cubic-bezier(0, 0, 0.2, 1);
+
+  &.collapsedSidenav {
+    width: calc(100% - #{$collapsed-sidenav-width});
+    margin-left: $collapsed-sidenav-width;
+    transition: width .3s cubic-bezier(0, 0, 0.2, 1);
+  }
 }
