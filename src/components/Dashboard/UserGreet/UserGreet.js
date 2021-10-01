@@ -28,7 +28,7 @@ const UserGreet = ({
                 direction={userIconSlideDirection}
             >
                 <UserProfileIcon
-                    iconSize={55}
+                    iconSize={65}
                     tabName={PROFILE_GROUP.PROFILE_SCREEN}
                     progress={progress}
                     firstName={firstName}

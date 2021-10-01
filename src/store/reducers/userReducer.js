@@ -5,7 +5,7 @@ const INITIAL_STATE = {
     lastName: 'Doe',
     userStatus: PREMIUM_STATUS,
     activityGroup: 'Monthly Active Users',
-    progress: 0.7
+    progress: 0.75
 }
 
 export default (state = INITIAL_STATE, action) => {

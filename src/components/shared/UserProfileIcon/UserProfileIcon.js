@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 
 import * as AntDesignIcons from 'react-icons/ai';
+import { AiOutlineUser } from "react-icons/all";
 
 import {getSidenavTabIconName} from '../../../constants/sidenavConstants';
-import colors from '../../../modules/styles/colors.module.scss';
 import styles from './UserProfileIcon.module.scss';
 
 const UserProfileIcon = React.forwardRef(({
@@ -16,36 +16,60 @@ const UserProfileIcon = React.forwardRef(({
     const ProfileIcon = AntDesignIcons[getSidenavTabIconName(tabName)];
 
     useEffect(() => {
-        setTimeout(() => setTimedOutProgress(progress), 500);
-    }, [])
+        setTimeout(() => setTimedOutProgress(1 - progress), 500);
+    }, [progress]);
+
+    const BAR_WIDTH = 4;
+    const CENTER = iconSize / 2;
+    const CIRCLE_RADIUS = CENTER - BAR_WIDTH;
+    const DASHARRAY = 2 * CIRCLE_RADIUS * Math.PI;
+    const DASHOFFSET = DASHARRAY * timedOutProgress;
 
     if (progress) {
         return (
             <div
-                className={styles.userProfileProgressWrapper}
+                className={styles.userProfileProgress}
                 style={{
                     width: iconSize,
-                    height: iconSize,
-                    minWidth: iconSize,
-                    minHeight: iconSize,
-                    background:
-                        `conic-gradient(${colors.blue} 0deg, ${colors.blue} ${timedOutProgress * 360}deg, transparent ${360 * timedOutProgress}deg)`
+                    height: iconSize
                 }}
                 ref={ref}
-                title={`Your progress: ${timedOutProgress * 100}%`}
+                title={`Your progress: ${progress * 100}%`}
             >
-                <div
-                    className={styles.userProfileProgressWrapper__inner}
-                    style={{
-                        width: iconSize - 6,
-                        height: iconSize - 6,
-                    }}
+                <svg
+                    className={styles.userProfileProgress__rail}
+                    viewBox={`0 0 ${iconSize} ${iconSize}`}
+                    xmlns={'http://www.w3.org/2000/svg'}
+                    width={iconSize}
+                    height={iconSize}
                 >
-                    <ProfileIcon
-                        size={iconSize - 20}
-                        className={styles.userProfileProgressWrapper__iconProgress}
+                    <circle
+                        cx={CENTER}
+                        cy={CENTER}
+                        r={CIRCLE_RADIUS}
                     />
-                </div>
+                </svg>
+                <svg
+                    className={styles.userProfileProgress__bar}
+                    viewBox={`0 0 ${iconSize} ${iconSize}`}
+                    xmlns={'http://www.w3.org/2000/svg'}
+                    width={iconSize}
+                    height={iconSize}
+                    strokeWidth={BAR_WIDTH}
+                >
+                    <circle
+                        cx={CENTER}
+                        cy={CENTER}
+                        r={CIRCLE_RADIUS}
+                        strokeWidth={BAR_WIDTH}
+                        strokeDasharray={DASHARRAY}
+                        strokeDashoffset={DASHOFFSET}
+                    />
+                </svg>
+                <AiOutlineUser
+                    className={styles.userProfileProgress__icon}
+                    size={iconSize / 2}
+                />
             </div>
         );
     }
