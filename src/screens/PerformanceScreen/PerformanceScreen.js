@@ -1,7 +1,7 @@
 import React from 'react';
 
-import LayoutWrapper from "../../components/LayoutWrapper/LayoutWrapper";
-import ScreenTitle from "../../components/ScreenTitle/ScreenTitle";
+import LayoutWrapper from "../../components/shared/LayoutWrapper/LayoutWrapper";
+import ScreenTitle from "../../components/shared/ScreenTitle/ScreenTitle";
 import PerformanceOverviewContainer from "../../containers/PerformanceOverviewContainer";
 import PerformanceGraphContainer from "../../containers/PerformanceGraphContainer";
 import TotalViewGraphContainer from "../../containers/TotalViewGraphContainer";

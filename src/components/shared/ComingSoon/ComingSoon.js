@@ -2,7 +2,7 @@ import React from 'react';
 
 import Lottie from 'react-lottie';
 
-import comingSoonAnimation from '../../modules/lottie/coming-soon.json';
+import comingSoonAnimation from '../../../modules/lottie/coming-soon.json';
 
 const ComingSoon = () => {
     const defaultOptions = {

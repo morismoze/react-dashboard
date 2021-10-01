@@ -2,7 +2,7 @@ import React from 'react';
 
 import classNames from 'classnames';
 
-import ChangeBadge from '../../ChangeBadge/ChangeBadge';
+import ChangeBadge from '../../shared/ChangeBadge/ChangeBadge';
 import {
     CHECKLISTS_OVERVIEW_SUBTITLE,
     GUIDE_VIEWS_OVERVIEW_SUBTITLE,

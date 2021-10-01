@@ -5,7 +5,7 @@ import {Line} from 'react-chartjs-2';
 import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
 import colors from '../../../modules/styles/colors.module.scss';
 import styles from './PerformanceGraph.module.scss';
-import BulletPoint from "../../BulletLabel/BulletLabel";
+import BulletPoint from "../../shared/BulletLabel/BulletLabel";
 
 const PerformanceGraph = ({
     performance

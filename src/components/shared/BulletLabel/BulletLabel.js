@@ -2,7 +2,7 @@ import React from 'react';
 
 import classNames from "classnames";
 
-import colors from '../../modules/styles/colors.module.scss';
+import colors from '../../../modules/styles/colors.module.scss';
 import styles from './BulletLabel.module.scss';
 
 const BulletLabel = ({

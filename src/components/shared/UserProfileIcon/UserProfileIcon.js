@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import * as AntDesignIcons from 'react-icons/ai';
 
@@ -6,12 +6,18 @@ import {getSidenavTabIconName} from '../../../constants/sidenavConstants';
 import colors from '../../../modules/styles/colors.module.scss';
 import styles from './UserProfileIcon.module.scss';
 
-const UserProfileIcon = ({
+const UserProfileIcon = React.forwardRef(({
     tabName,
     iconSize,
     progress
-}) => {
+}, ref) => {
+    const [ timedOutProgress, setTimedOutProgress ] = useState();
+
     const ProfileIcon = AntDesignIcons[getSidenavTabIconName(tabName)];
+
+    useEffect(() => {
+        setTimeout(() => setTimedOutProgress(progress), 500);
+    }, [])
 
     if (progress) {
         return (
@@ -22,8 +28,11 @@ const UserProfileIcon = ({
                     height: iconSize,
                     minWidth: iconSize,
                     minHeight: iconSize,
-                    background: `conic-gradient(${colors.blue} 0% ${progress}%, transparent 0% ${progress}%)`
+                    background:
+                        `conic-gradient(${colors.blue} 0deg, ${colors.blue} ${timedOutProgress * 360}deg, transparent ${360 * timedOutProgress}deg)`
                 }}
+                ref={ref}
+                title={`Your progress: ${timedOutProgress * 100}%`}
             >
                 <div
                     className={styles.userProfileProgressWrapper__inner}
@@ -48,6 +57,7 @@ const UserProfileIcon = ({
                 width: iconSize,
                 height: iconSize,
             }}
+            ref={ref}
         >
             <ProfileIcon
                 size={iconSize - 12}
@@ -55,6 +65,6 @@ const UserProfileIcon = ({
             />
         </div>
     );
-};
+});
 
 export default UserProfileIcon;

@@ -6,7 +6,7 @@ import classNames from "classnames";
 import * as AntDesignIcons from 'react-icons/ai';
 
 import SidenavGroupTab from "../SidenavGroupTab/SidenavGroupTab";
-import UserProfileIcon from '../../User/UserProfileIcon/UserProfileIcon';
+import UserProfileIcon from '../../shared/UserProfileIcon/UserProfileIcon';
 import {PREMIUM_STATUS} from "../../../constants/userConstants";
 import styles from './SidenavUserTab.module.scss';
 

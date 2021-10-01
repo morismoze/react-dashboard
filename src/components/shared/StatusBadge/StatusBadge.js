@@ -2,8 +2,8 @@ import React from 'react';
 
 import classNames from "classnames";
 
-import {capitalizeFirstLetter} from "../../modules/util/stringManipulation";
-import {DISABLED_STATUS, LIVE_STATUS} from "../../constants/screenConstants";
+import {capitalizeFirstLetter} from "../../../modules/util/stringManipulation";
+import {DISABLED_STATUS, LIVE_STATUS} from "../../../constants/screenConstants";
 import styles from './StatusBadge.module.scss';
 
 const StatusBadge = ({

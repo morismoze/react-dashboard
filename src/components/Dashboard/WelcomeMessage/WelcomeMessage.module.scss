@@ -1,0 +1,15 @@
+@import "src/modules/styles/colors.module";
+
+.welcomeMessage {
+  color: $dark-blue;
+  margin-bottom: 8px;
+
+  &__welcome {
+    font-weight: 700;
+  }
+
+  &__name {
+    margin-left: 10px;
+    font-weight: 400;
+  }
+}
