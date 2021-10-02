@@ -1,16 +1,14 @@
 import React from 'react';
 
-import LayoutWrapper from "../../components/shared/LayoutWrapper/LayoutWrapper";
+import WithLayoutWrapper from "../../components/shared/withLayoutWrapper/withLayoutWrapper";
 import ComingSoon from "../../components/shared/ComingSoon/ComingSoon";
 import styles from './NpsScreen.module.scss';
 
 const NpsScreen = () => {
+    const NpsScreenWithLayoutWrapper = WithLayoutWrapper(ComingSoon);
+
     return (
-        <LayoutWrapper
-            className={styles.npsScreenLayout}
-        >
-            <ComingSoon/>
-        </LayoutWrapper>
+        <NpsScreenWithLayoutWrapper className={styles.npsScreenLayout}/>
     );
 };
 

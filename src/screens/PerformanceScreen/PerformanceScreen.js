@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LayoutWrapper from "../../components/shared/LayoutWrapper/LayoutWrapper";
+import WithLayoutWrapper from "../../components/shared/withLayoutWrapper/withLayoutWrapper";
 import ScreenTitle from "../../components/shared/ScreenTitle/ScreenTitle";
 import PerformanceOverviewContainer from "../../containers/PerformanceOverviewContainer";
 import PerformanceGraphContainer from "../../containers/PerformanceGraphContainer";
@@ -9,12 +9,11 @@ import {ANALYTICS_GROUP} from "../../constants/screenConstants";
 import styles from './PerformanceScreen.module.scss';
 import GuideListsContainer from "../../containers/GuideListsContainer";
 import TeamPerformanceContainer from "../../containers/TeamPerformanceContainer";
+import ComingSoon from "../../components/shared/ComingSoon/ComingSoon";
 
 const PerformanceScreen = () => {
-    return (
-        <LayoutWrapper
-            className={styles.performanceScreenLayout}
-        >
+    const Children = () => (
+        <>
             <ScreenTitle
                 title={ANALYTICS_GROUP.PERFORMANCE_SCREEN}
                 slideTimeout={300}
@@ -25,7 +24,13 @@ const PerformanceScreen = () => {
             <TotalViewGraphContainer/>
             <GuideListsContainer/>
             <TeamPerformanceContainer/>
-        </LayoutWrapper>
+        </>
+    );
+
+    const PerformanceScreenWithLayoutWrapper = WithLayoutWrapper(Children);
+
+    return (
+        <PerformanceScreenWithLayoutWrapper className={styles.performanceScreenLayout}/>
     );
 };
 

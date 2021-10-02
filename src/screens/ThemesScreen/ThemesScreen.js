@@ -1,16 +1,14 @@
 import React from 'react';
 
-import LayoutWrapper from "../../components/shared/LayoutWrapper/LayoutWrapper";
+import WithLayoutWrapper from "../../components/shared/withLayoutWrapper/withLayoutWrapper";
 import ComingSoon from "../../components/shared/ComingSoon/ComingSoon";
 import styles from './ThemesScreen.module.scss';
 
 const ThemesScreen = () => {
+    const ThemesScreenWithLayoutWrapper = WithLayoutWrapper(ComingSoon);
+
     return (
-        <LayoutWrapper
-            className={styles.themesScreenLayout}
-        >
-            <ComingSoon/>
-        </LayoutWrapper>
+        <ThemesScreenWithLayoutWrapper className={styles.themesScreenLayout}/>
     );
 };
 

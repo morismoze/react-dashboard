@@ -1,16 +1,14 @@
 import React from 'react';
 
-import LayoutWrapper from "../../components/shared/LayoutWrapper/LayoutWrapper";
+import WithLayoutWrapper from "../../components/shared/withLayoutWrapper/withLayoutWrapper";
 import ComingSoon from "../../components/shared/ComingSoon/ComingSoon";
 import styles from './LogoutScreen.module.scss';
 
 const LogoutScreen = () => {
+    const LogoutScreenWithLayoutWrapper = WithLayoutWrapper(ComingSoon);
+
     return (
-        <LayoutWrapper
-            className={styles.logoutScreen}
-        >
-            <ComingSoon/>
-        </LayoutWrapper>
+        <LogoutScreenWithLayoutWrapper className={styles.logoutScreenLayout}/>
     );
 };
 

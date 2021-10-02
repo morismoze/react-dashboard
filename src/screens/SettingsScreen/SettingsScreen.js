@@ -1,16 +1,14 @@
 import React from 'react';
 
-import LayoutWrapper from "../../components/shared/LayoutWrapper/LayoutWrapper";
+import WithLayoutWrapper from "../../components/shared/withLayoutWrapper/withLayoutWrapper";
 import ComingSoon from "../../components/shared/ComingSoon/ComingSoon";
 import styles from './SettingsScreen.module.scss';
 
 const SettingsScreen = () => {
+    const SettingsScreenWithLayoutWrapper = WithLayoutWrapper(ComingSoon);
+
     return (
-        <LayoutWrapper
-            className={styles.settingsScreenScreenLayout}
-        >
-            <ComingSoon/>
-        </LayoutWrapper>
+        <SettingsScreenWithLayoutWrapper className={styles.settingsScreenScreenLayout}/>
     );
 };
 

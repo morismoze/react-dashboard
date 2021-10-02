@@ -1,16 +1,14 @@
 import React from 'react';
 
-import LayoutWrapper from "../../components/shared/LayoutWrapper/LayoutWrapper";
+import WithLayoutWrapper from "../../components/shared/withLayoutWrapper/withLayoutWrapper";
 import ComingSoon from "../../components/shared/ComingSoon/ComingSoon";
-import styles from './Hotspots.module.scss';
+import styles from './HotspotsScreen.module.scss';
 
 const HotspotsScreen = () => {
+    const HotspotsScreenWithLayoutWrapper = WithLayoutWrapper(ComingSoon);
+
     return (
-        <LayoutWrapper
-            className={styles.hotspotsScreenLayout}
-        >
-            <ComingSoon/>
-        </LayoutWrapper>
+        <HotspotsScreenWithLayoutWrapper className={styles.hotspotsScreenLayout}/>
     );
 };
 

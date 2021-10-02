@@ -1,14 +1,12 @@
 import React from 'react';
 
-import LayoutWrapper from "../../components/shared/LayoutWrapper/LayoutWrapper";
+import WithLayoutWrapper from "../../components/shared/withLayoutWrapper/withLayoutWrapper";
 import UserGreetContainer from "../../containers/UserGreetContainer";
 import styles from './DashboardScreen.module.scss';
 
 const DashboardScreen = () => {
-    return (
-        <LayoutWrapper
-            className={styles.dashboardScreenLayout}
-        >
+    const Children = () => (
+        <>
             <UserGreetContainer
                 userIconSlideTimeout={300}
                 userIconSlideDirection={'down'}
@@ -21,7 +19,13 @@ const DashboardScreen = () => {
             <div></div>
             <div></div>
             <div></div>
-        </LayoutWrapper>
+        </>
+    );
+
+    const DashboardScreenWithLayoutWrapper = WithLayoutWrapper(Children);
+
+    return (
+        <DashboardScreenWithLayoutWrapper className={styles.dashboardScreenLayout}/>
     );
 };
 

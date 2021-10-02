@@ -1,16 +1,14 @@
 import React from 'react';
 
-import LayoutWrapper from "../../components/shared/LayoutWrapper/LayoutWrapper";
+import WithLayoutWrapper from "../../components/shared/withLayoutWrapper/withLayoutWrapper";
 import ComingSoon from "../../components/shared/ComingSoon/ComingSoon";
 import styles from './GuidesScreen.module.scss';
 
 const GuidesScreen = () => {
+    const GuidesScreenWithLayoutWrapper = WithLayoutWrapper(ComingSoon);
+
     return (
-        <LayoutWrapper
-            className={styles.guidesScreenLayout}
-        >
-            <ComingSoon/>
-        </LayoutWrapper>
+        <GuidesScreenWithLayoutWrapper className={styles.guidesScreenLayout}/>
     );
 };
 

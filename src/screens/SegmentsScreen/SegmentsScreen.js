@@ -1,16 +1,14 @@
 import React from 'react';
 
-import LayoutWrapper from "../../components/shared/LayoutWrapper/LayoutWrapper";
+import WithLayoutWrapper from "../../components/shared/withLayoutWrapper/withLayoutWrapper";
 import ComingSoon from "../../components/shared/ComingSoon/ComingSoon";
 import styles from './SegmentsScreen.module.scss';
 
 const SegmentsScreen = () => {
+    const SegmentsScreenWithLayoutWrapper = WithLayoutWrapper(ComingSoon);
+
     return (
-        <LayoutWrapper
-            className={styles.segmentsScreenScreenLayout}
-        >
-            <ComingSoon/>
-        </LayoutWrapper>
+        <SegmentsScreenWithLayoutWrapper className={styles.segmentsScreenScreenLayout}/>
     );
 };
 
