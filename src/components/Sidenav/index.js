@@ -1,16 +1,18 @@
 import React from 'react';
 
-import {Slide} from "@mui/material";
+import classNames from "classnames";
+import { Slide } from "@mui/material";
 import { Tooltip } from "@mui/material";
 import { AiOutlineDoubleLeft } from "react-icons/all";
 
-import SidenavGroup from "../SidenavGroup/SidenavGroup";
-import SidenavGroupTab from "../SidenavGroupTab/SidenavGroupTab";
-import SidenavUserTab from "../SidenavUserTab/SidenavUserTab";
-import dashboardLogo from '../../../modules/images/logo/dashboard-logo.svg';
-import {LOG_GROUP, PROFILE_GROUP, SETTINGS_GROUP, SIDENAV_GROUPS} from "../../../constants/screenConstants";
+import SidenavGroup from "./SidenavGroup";
+import SidenavGroupTab from "./SidenavGroupTab";
+import SidenavUserTab from "./SidenavUserTab";
+import { LOG_GROUP, PROFILE_GROUP, SETTINGS_GROUP, SIDENAV_GROUPS } from "../../constants/screenConstants";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import dashboardLogo from '../../modules/images/logo/dashboard-logo.svg';
+import breakpoints from '../../modules/styles/breakpoints.module.scss';
 import styles from './Sidenav.module.scss';
-import classNames from "classnames";
 
 const Sidenav = ({
     activeScreen,
@@ -21,10 +23,14 @@ const Sidenav = ({
     isSidebarCollapsed,
     toggleSidebar
 }) => {
+    const { width } = useWindowSize();
+
+    const isSidenavShown = width > breakpoints.large.split('p')[0];
+
     return (
         <Slide
             direction={'right'}
-            in={true}
+            in={isSidenavShown}
             appear={!isSidebarCollapsed}
             timeout={300}
         >

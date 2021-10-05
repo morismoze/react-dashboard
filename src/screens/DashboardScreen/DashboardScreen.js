@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WithLayoutWrapper from "../../components/shared/withLayoutWrapper/withLayoutWrapper";
+import WithLayoutWrapper from "../../components/shared/withLayoutWrapper";
 import UserGreetContainer from "../../containers/UserGreetContainer";
 import styles from './DashboardScreen.module.scss';
 

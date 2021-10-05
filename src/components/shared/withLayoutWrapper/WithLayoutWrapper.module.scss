@@ -1,14 +1,23 @@
 @import "src/modules/styles/sidenav";
+@import "src/modules/styles/breakpoints.module";
 
 .screenWrapper {
   min-height: 100vh;
   width: calc(100% - #{$sidenav-width});
   margin-left: $sidenav-width;
-  transition: width .3s cubic-bezier(0, 0, 0.2, 1);
+  transition: width, margin-left .3s cubic-bezier(0, 0, 0.2, 1);
 
   &.collapsedSidenav {
     width: calc(100% - #{$collapsed-sidenav-width});
     margin-left: $collapsed-sidenav-width;
     transition: width .3s cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  @media only screen and (max-width: $large) {
+    &,
+    &.collapsedSidenav {
+      margin-left: 0;
+      width: 100%;
+    }
   }
 }

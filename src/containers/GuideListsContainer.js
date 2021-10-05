@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import GuideLists from "../components/Performance/GuideLists/GuideLists";
+import GuideLists from "../components/Performance/GuideLists";
 
 const mapStateToProps = state => ({
     performance: state.mainReducer.performance

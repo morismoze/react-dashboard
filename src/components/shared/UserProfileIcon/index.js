@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import * as AntDesignIcons from 'react-icons/ai';
 import { AiOutlineUser } from "react-icons/all";
 
-import {getSidenavTabIconName} from '../../../constants/sidenavConstants';
+import { getSidenavTabIconName } from '../../../constants/sidenavConstants';
 import styles from './UserProfileIcon.module.scss';
 
 const UserProfileIcon = React.forwardRef(({
@@ -63,7 +63,7 @@ const UserProfileIcon = React.forwardRef(({
                         r={CIRCLE_RADIUS}
                         strokeWidth={BAR_WIDTH}
                         strokeDasharray={DASHARRAY}
-                        strokeDashoffset={DASHOFFSET}
+                        strokeDashoffset={DASHOFFSET && DASHOFFSET}
                     />
                 </svg>
                 <AiOutlineUser

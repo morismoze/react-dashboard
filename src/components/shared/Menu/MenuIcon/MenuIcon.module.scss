@@ -1,0 +1,53 @@
+@import "src/modules/styles/colors.module";
+@import "src/modules/styles/breakpoints.module";
+
+.menuIcon {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  background: $dark-blue;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  z-index: 11;
+  transition: all .2s ease-in-out;
+
+  &:before,
+  &:after {
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: $white;
+    transition: all .2s ease-in;
+  }
+
+  &:after {
+    width: 25px;
+    margin-top: 5px;
+  }
+
+  &:hover:before {
+    width: 25px;
+  }
+
+  &.active {
+    &:before {
+      width: 25px;
+      transform: translateY(3.5px) rotate(-45deg);
+    }
+
+    &:after {
+      transform: translateY(-3.5px) rotate(45deg);
+    }
+  }
+
+  @media only screen and (min-width: $large) {
+    display: none;
+  }
+}

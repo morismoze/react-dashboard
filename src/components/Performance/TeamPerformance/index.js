@@ -1,8 +1,8 @@
 import React from 'react';
 
-import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
-import TeamCard from "../TeamCard/TeamCard";
-import {TEAM_PERFORMANCE_CARD_TITLE} from "../../../constants/screenConstants";
+import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper";
+import TeamCard from "../TeamCard";
+import { TEAM_PERFORMANCE_CARD_TITLE } from "../../../constants/screenConstants";
 
 const TeamPerformance = ({
     performance

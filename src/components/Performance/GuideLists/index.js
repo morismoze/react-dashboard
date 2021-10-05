@@ -3,9 +3,9 @@ import React from 'react';
 import classNames from "classnames";
 import { AiOutlineEye } from "react-icons/all";
 
-import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
-import StatusBadge from "../../shared/StatusBadge/StatusBadge";
-import ChangeBadge from "../../shared/ChangeBadge/ChangeBadge";
+import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper";
+import StatusBadge from "../../shared/StatusBadge";
+import ChangeBadge from "../../shared/ChangeBadge";
 import {
     DISABLED_STATUS,
     GUIDE_LISTS_GUIDE_NAME,

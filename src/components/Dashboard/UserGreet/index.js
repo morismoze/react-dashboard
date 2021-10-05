@@ -2,12 +2,11 @@ import React from 'react';
 
 import { Fade, Slide } from "@mui/material";
 
-import WelcomeMessage from "../WelcomeMessage/WelcomeMessage";
-import ActivityGroup from "../ActivityGroup/ActivityGroup";
-import UserProfileIcon from "../../shared/UserProfileIcon/UserProfileIcon";
+import WelcomeMessage from "../WelcomeMessage";
+import ActivityGroup from "../ActivityGroup";
+import UserProfileIcon from "../../shared/UserProfileIcon";
 import { PROFILE_GROUP } from "../../../constants/screenConstants";
 import styles from './UserGreet.module.scss';
-
 
 const UserGreet = ({
     firstName,

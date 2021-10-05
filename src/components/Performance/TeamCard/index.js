@@ -1,7 +1,7 @@
 import React from 'react';
 
-import TeamMemberPicture from "../TeamMemberPicture/TeamMemberPicture";
-import TeamInfo from "../TeamInfo/TeamInfo";
+import TeamMemberPicture from "../TeamMemberPicture";
+import TeamInfo from "../TeamInfo";
 import styles from './TeamCard.module.scss';
 
 const TeamCard = ({

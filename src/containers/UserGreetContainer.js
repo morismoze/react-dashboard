@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import UserGreet from "../components/Dashboard/UserGreet/UserGreet";
+import UserGreet from "../components/Dashboard/UserGreet";
 import { setActiveScreen } from "../store/actions/actions";
 
 const mapStateToProps = state => ({

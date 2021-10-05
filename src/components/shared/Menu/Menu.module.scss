@@ -1,0 +1,12 @@
+@import "src/modules/styles/colors.module";
+@import "src/modules/styles/breakpoints.module";
+
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  z-index: 10;
+}

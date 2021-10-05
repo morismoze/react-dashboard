@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {getRandomColor} from "../../../modules/util/style";
+import { getRandomColor } from "../../../modules/util/style";
 import colors from '../../../modules/styles/colors.module.scss';
 import styles from './TeamInfo.module.scss';
 

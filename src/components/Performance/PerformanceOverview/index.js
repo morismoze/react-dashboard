@@ -2,7 +2,7 @@ import React from 'react';
 
 import Fade from '@mui/material/Fade';
 
-import PerformanceOverviewCard from "../PerformanceOverviewCard/PerformanceOverviewCard";
+import PerformanceOverviewCard from "../PerformanceOverviewCard";
 import styles from './PerformanceOverview.module.scss';
 
 const PerformanceOverview = ({

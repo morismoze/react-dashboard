@@ -3,12 +3,12 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import classNames from "classnames";
 
+import { Tooltip } from "@mui/material";
 import * as AntDesignIcons from 'react-icons/ai';
 
 import { getSidenavTabIconName } from "../../../constants/sidenavConstants";
+import { capitalizeFirstLetter } from "../../../modules/util/stringManipulation";
 import styles from './SidenavGroupTab.module.scss';
-import {Tooltip} from "@mui/material";
-import {capitalizeFirstLetter} from "../../../modules/util/stringManipulation";
 
 const SidenavGroupTab = ({
     tabName,

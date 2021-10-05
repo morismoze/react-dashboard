@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import PerformanceOverview from "../components/Performance/PerformanceOverview/PerformanceOverview";
+import PerformanceOverview from "../components/Performance/PerformanceOverview";
 
 const mapStateToProps = state => ({
     performance: state.mainReducer.performance

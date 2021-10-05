@@ -1,5 +1,6 @@
 import {
     SET_ACTIVE_SCREEN,
+    TOGGLE_MENU,
     TOGGLE_SIDEBAR
 } from './actionTypes';
 
@@ -10,4 +11,8 @@ export const setActiveScreen = screenId => ({
 
 export const toggleSidebar = () => ({
     type: TOGGLE_SIDEBAR
+});
+
+export const toggleMenu = () => ({
+   type: TOGGLE_MENU
 });

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import PerformanceGraph from "../components/Performance/PerformanceGraph/PerformanceGraph";
+import PerformanceGraph from "../components/Performance/PerformanceGraph";
 
 const mapStateToProps = state => ({
     performance: state.mainReducer.performance

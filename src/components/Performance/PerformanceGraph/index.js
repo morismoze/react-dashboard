@@ -1,11 +1,11 @@
 import React from 'react';
 
-import {Line} from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
-import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
+import BulletPoint from "../../shared/BulletLabel";
+import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper";
 import colors from '../../../modules/styles/colors.module.scss';
 import styles from './PerformanceGraph.module.scss';
-import BulletPoint from "../../shared/BulletLabel/BulletLabel";
 
 const PerformanceGraph = ({
     performance

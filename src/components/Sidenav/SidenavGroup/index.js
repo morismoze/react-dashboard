@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SidenavGroupTab from "../SidenavGroupTab/SidenavGroupTab";
+import SidenavGroupTab from "../SidenavGroupTab";
 import styles from './SidenavGroup.module.scss';
 import classNames from "classnames";
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classNames from 'classnames';
-import {AiOutlineArrowDown, AiOutlineArrowUp} from 'react-icons/all';
+import { AiOutlineArrowDown, AiOutlineArrowUp } from 'react-icons/all';
 
 import styles from './ChangeBadge.module.scss';
 

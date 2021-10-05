@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
-import {Doughnut} from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 
-import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper/PerformanceCardLayoutWrapper";
-import Button from "../../shared/Button/Button";
-import BulletPoint from "../../shared/BulletLabel/BulletLabel";
-import {GUIDE_VIEWS_OVERVIEW_SUBTITLE} from "../../../constants/screenConstants";
+import PerformanceCardLayoutWrapper from "../PerformanceCardLayoutWrapper";
+import Button from "../../shared/Button";
+import BulletPoint from "../../shared/BulletLabel";
+import { GUIDE_VIEWS_OVERVIEW_SUBTITLE } from "../../../constants/screenConstants";
 import colors from '../../../modules/styles/colors.module.scss';
 import styles from './TotalViewGraph.module.scss';
 

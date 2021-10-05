@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import TeamPerformance from "../components/Performance/TeamPerformance/TeamPerformance";
+import TeamPerformance from "../components/Performance/TeamPerformance";
 
 const mapStateToProps = state => ({
     performance: state.mainReducer.performance

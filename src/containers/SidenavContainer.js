@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 
-import Sidenav from "../components/Sidenav/Sidenav/Sidenav";
-import {setActiveScreen, toggleSidebar} from "../store/actions/actions";
+import Sidenav from "../components/Sidenav";
+import { setActiveScreen, toggleSidebar } from "../store/actions/actions";
 
 const mapStateToProps = state => ({
    activeScreen: state.navigationReducer.activeScreen,

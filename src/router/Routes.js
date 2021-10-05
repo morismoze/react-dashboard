@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 import SidenavContainer from "../containers/SidenavContainer";
+import MenuContainer from "../containers/MenuContainer";
 import DashboardScreen from "../screens/DashboardScreen/DashboardScreen";
 import PerformanceScreen from "../screens/PerformanceScreen/PerformanceScreen";
 import GuidesScreen from "../screens/GuidesScreen/GuidesScreen";
@@ -17,8 +18,9 @@ import ProfileScreen from "../screens/ProfileScreen/ProfileScreen";
 const Routes = () => {
     return (
         <>
-            <Redirect from="/" to="/dashboard" />
+            <Redirect from="/" to="/dashboard"/>
             <SidenavContainer/>
+            <MenuContainer/>
             <Switch>
                 <Route path={'/dashboard'} exact={true}>
                     <DashboardScreen/>
